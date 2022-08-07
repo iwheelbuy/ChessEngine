@@ -60,40 +60,40 @@ const string Version = "";
 /// Idea from http://groups.google.com/group/comp.lang.c++/msg/1d941c0f26ea0d81
 
 struct Tie: public streambuf { // MSVC requires split streambuf for cin and cout
-
+   
    Tie(streambuf* b, streambuf* l) : buf(b), logBuf(l) {}
-
+   
    int sync() { return logBuf->pubsync(), buf->pubsync(); }
    int overflow(int c) { return log(buf->sputc((char)c), "<< "); }
    int underflow() { return buf->sgetc(); }
    int uflow() { return log(buf->sbumpc(), ">> "); }
-
+   
    streambuf *buf, *logBuf;
-
+   
    int log(int c, const char* prefix) {
-
+      
       static int last = '\n'; // Single log file
-
+      
       if (last == '\n')
          logBuf->sputn(prefix, 3);
-
+      
       return last = logBuf->sputc((char)c);
    }
 };
 
 class Logger {
-
+   
    Logger() : in(cin.rdbuf(), file.rdbuf()), out(cout.rdbuf(), file.rdbuf()) {}
    ~Logger() { start(""); }
-
+   
    ofstream file;
    Tie in, out;
-
+   
 public:
    static void start(const std::string& fname) {
-
+      
       static Logger l;
-
+      
       if (!fname.empty() && !l.file.is_open())
       {
          l.file.open(fname, ifstream::out);
@@ -112,29 +112,29 @@ public:
 } // namespace
 
 const string engine_info(bool to_uci) {
-
+   
    /// engine_info() returns the full name of the current Stockfish version. This
    /// will be either "Stockfish <Tag> DD-MM-YY" (where DD-MM-YY is the date when
    /// the program was compiled) or "Stockfish <Version>", depending on whether
    /// Version is empty.
-
+   
    const string months("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec");
    string month, day, year;
    stringstream ss, date(__DATE__); // From compiler, format is "Sep 21 2008"
-
+   
    ss << "Stockfish " << Version << setfill('0');
-
+   
    if (Version.empty())
    {
       date >> month >> day >> year;
       ss << setw(2) << day << setw(2) << (1 + months.find(month) / 4) << year.substr(2);
    }
-
+   
    ss << (Is64Bit ? " 64" : "");
    ss << (HasPext ? " BMI2" : (HasPopCnt ? " POPCNT" : ""));
    ss << (to_uci  ? "\nid author ": " by ");
    ss << "T. Romstad, M. Costalba, J. Kiiski, G. Linscott";
-
+   
    return ss.str();
 }
 
@@ -147,11 +147,11 @@ void dbg_hit_on(bool c, bool b) { if (c) dbg_hit_on(b); }
 void dbg_mean_of(int v) { ++means[0]; means[1] += v; }
 
 void dbg_print() {
-
+   
    if (hits[0])
       cerr << "Total " << hits[0] << " Hits " << hits[1]
       << " hit rate (%) " << 100 * hits[1] / hits[0] << endl;
-
+   
    if (means[0])
       cerr << "Total " << means[0] << " Mean "
       << (double)means[1] / means[0] << endl;
@@ -162,15 +162,15 @@ void dbg_print() {
 /// the same time.
 
 std::ostream& operator<<(std::ostream& os, SyncCout sc) {
-
+   
    static Mutex m;
-
+   
    if (sc == IO_LOCK)
       m.lock();
-
+   
    if (sc == IO_UNLOCK)
       m.unlock();
-
+   
    return os;
 }
 
@@ -189,13 +189,13 @@ void prefetch(void*) {}
 #else
 
 void prefetch(void* addr) {
-
+   
 #  if defined(__INTEL_COMPILER)
    // This hack prevents prefetches from being optimized away by
    // Intel compiler. Both MSVC and gcc seem not be affected by this.
    __asm__ ("");
 #  endif
-
+   
 #  if defined(__INTEL_COMPILER) || defined(_MSC_VER)
    _mm_prefetch((char*)addr, _MM_HINT_T0);
 #  else
@@ -218,65 +218,65 @@ void bindThisThread(size_t) {}
 /// code from Texel by Peter Österlund.
 
 int get_group(size_t idx) {
-
+   
    int threads = 0;
    int nodes = 0;
    int cores = 0;
    DWORD returnLength = 0;
    DWORD byteOffset = 0;
-
+   
    // Early exit if the needed API is not available at runtime
    HMODULE k32 = GetModuleHandle("Kernel32.dll");
    auto fun1 = (fun1_t)GetProcAddress(k32, "GetLogicalProcessorInformationEx");
    if (!fun1)
       return -1;
-
+   
    // First call to get returnLength. We expect it to fail due to null buffer
    if (fun1(RelationAll, nullptr, &returnLength))
       return -1;
-
+   
    // Once we know returnLength, allocate the buffer
    SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX *buffer, *ptr;
    ptr = buffer = (SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX*)malloc(returnLength);
-
+   
    // Second call, now we expect to succeed
    if (!fun1(RelationAll, buffer, &returnLength))
    {
       free(buffer);
       return -1;
    }
-
+   
    while (ptr->Size > 0 && byteOffset + ptr->Size <= returnLength)
    {
       if (ptr->Relationship == RelationNumaNode)
          nodes++;
-
+      
       else if (ptr->Relationship == RelationProcessorCore)
       {
          cores++;
          threads += (ptr->Processor.Flags == LTP_PC_SMT) ? 2 : 1;
       }
-
+      
       byteOffset += ptr->Size;
       ptr = (SYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX*)(((char*)ptr) + ptr->Size);
    }
-
+   
    free(buffer);
-
+   
    std::vector<int> groups;
-
+   
    // Run as many threads as possible on the same node until core limit is
    // reached, then move on filling the next node.
    for (int n = 0; n < nodes; n++)
       for (int i = 0; i < cores / nodes; i++)
          groups.push_back(n);
-
+   
    // In case a core has more than one logical processor (we assume 2) and we
    // have still threads to allocate, then spread them evenly across available
    // nodes.
    for (int t = 0; t < threads - cores; t++)
       groups.push_back(t % nodes);
-
+   
    // If we still have more threads than the total number of logical processors
    // then return -1 and let the OS to decide what to do.
    return idx < groups.size() ? groups[idx] : -1;
@@ -286,7 +286,7 @@ int get_group(size_t idx) {
 /// bindThisThread() set the group affinity of the current thread
 
 void bindThisThread(size_t idx) {
-
+   
    // If OS already scheduled us on a different group than 0 then don't overwrite
    // the choice, eventually we are one of many one-threaded processes running on
    // some Windows NUMA hardware, for instance in fishtest. To make it simple,
@@ -294,21 +294,21 @@ void bindThisThread(size_t idx) {
    // NUMA machinery is not needed.
    if (Threads.size() < 8)
       return;
-
+   
    // Use only local variables to be thread-safe
    int group = get_group(idx);
-
+   
    if (group == -1)
       return;
-
+   
    // Early exit if the needed API are not available at runtime
    HMODULE k32 = GetModuleHandle("Kernel32.dll");
    auto fun2 = (fun2_t)GetProcAddress(k32, "GetNumaNodeProcessorMaskEx");
    auto fun3 = (fun3_t)GetProcAddress(k32, "SetThreadGroupAffinity");
-
+   
    if (!fun2 || !fun3)
       return;
-
+   
    GROUP_AFFINITY affinity;
    if (fun2(group, &affinity))
       fun3(GetCurrentThread(), &affinity, nullptr);

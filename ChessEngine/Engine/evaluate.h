@@ -28,13 +28,13 @@
 class Position;
 
 namespace Eval {
-    
-    const Value Tempo = Value(20); // Must be visible to search
-    
-    std::string trace(const Position& pos);
-    
-    template<bool DoTrace = false>
-    Value evaluate(const Position& pos);
+
+const Value Tempo = Value(20); // Must be visible to search
+
+std::string trace(const Position& pos);
+
+template<bool DoTrace = false>
+Value evaluate(const Position& pos);
 }
 
 #endif // #ifndef EVALUATE_H_INCLUDED

@@ -42,47 +42,47 @@
 /// changing the entry under our feet.
 
 class Thread {
-    
-    std::thread nativeThread;
-    Mutex mutex;
-    ConditionVariable sleepCondition;
-    bool exit, searching;
-    
+   
+   std::thread nativeThread;
+   Mutex mutex;
+   ConditionVariable sleepCondition;
+   bool exit, searching;
+   
 public:
-    Thread();
-    virtual ~Thread();
-    virtual void search();
-    void idle_loop();
-    void start_searching(bool resume = false);
-    void wait_for_search_finished();
-    void wait(std::atomic_bool& condition);
-    
-    Pawns::Table pawnsTable;
-    Material::Table materialTable;
-    Endgames endgames;
-    size_t idx, PVIdx;
-    int maxPly, callsCnt;
-    uint64_t tbHits;
-    
-    Position rootPos;
-    Search::RootMoves rootMoves;
-    Depth rootDepth;
-    Depth completedDepth;
-    std::atomic_bool resetCalls;
-    MoveStats counterMoves;
-    HistoryStats history;
-    CounterMoveHistoryStats counterMoveHistory;
+   Thread();
+   virtual ~Thread();
+   virtual void search();
+   void idle_loop();
+   void start_searching(bool resume = false);
+   void wait_for_search_finished();
+   void wait(std::atomic_bool& condition);
+   
+   Pawns::Table pawnsTable;
+   Material::Table materialTable;
+   Endgames endgames;
+   size_t idx, PVIdx;
+   int maxPly, callsCnt;
+   uint64_t tbHits;
+   
+   Position rootPos;
+   Search::RootMoves rootMoves;
+   Depth rootDepth;
+   Depth completedDepth;
+   std::atomic_bool resetCalls;
+   MoveStats counterMoves;
+   HistoryStats history;
+   CounterMoveHistoryStats counterMoveHistory;
 };
 
 
 /// MainThread is a derived class with a specific overload for the main thread
 
 struct MainThread : public Thread {
-    virtual void search();
-    
-    bool easyMovePlayed, failedLow;
-    double bestMoveChanges;
-    Value previousScore;
+   virtual void search();
+   
+   bool easyMovePlayed, failedLow;
+   double bestMoveChanges;
+   Value previousScore;
 };
 
 
@@ -91,18 +91,18 @@ struct MainThread : public Thread {
 /// data is done through this class.
 
 struct ThreadPool : public std::vector<Thread*> {
-    
-    void init(); // No constructor and destructor, threads rely on globals that should
-    void exit(); // be initialized and valid during the whole thread lifetime.
-    
-    MainThread* main() { return static_cast<MainThread*>(at(0)); }
-    void start_thinking(Position&, StateListPtr&, const Search::LimitsType&);
-    void read_uci_options();
-    uint64_t nodes_searched() const;
-    uint64_t tb_hits() const;
-    
+   
+   void init(); // No constructor and destructor, threads rely on globals that should
+   void exit(); // be initialized and valid during the whole thread lifetime.
+   
+   MainThread* main() { return static_cast<MainThread*>(at(0)); }
+   void start_thinking(Position&, StateListPtr&, const Search::LimitsType&);
+   void read_uci_options();
+   uint64_t nodes_searched() const;
+   uint64_t tb_hits() const;
+   
 private:
-    StateListPtr setupStates;
+   StateListPtr setupStates;
 };
 
 extern ThreadPool Threads;

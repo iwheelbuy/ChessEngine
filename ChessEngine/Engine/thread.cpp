@@ -33,28 +33,28 @@ ThreadPool Threads; // Global object
 /// in idle_loop().
 
 Thread::Thread() {
-    
-    resetCalls = exit = false;
-    maxPly = callsCnt = 0;
-    tbHits = 0;
-    idx = Threads.size(); // Start from 0
-    
-    std::unique_lock<Mutex> lk(mutex);
-    searching = true;
-    nativeThread = std::thread(&Thread::idle_loop, this);
-    sleepCondition.wait(lk, [&]{ return !searching; });
+   
+   resetCalls = exit = false;
+   maxPly = callsCnt = 0;
+   tbHits = 0;
+   idx = Threads.size(); // Start from 0
+   
+   std::unique_lock<Mutex> lk(mutex);
+   searching = true;
+   nativeThread = std::thread(&Thread::idle_loop, this);
+   sleepCondition.wait(lk, [&]{ return !searching; });
 }
 
 
 /// Thread destructor waits for thread termination before returning
 
 Thread::~Thread() {
-    
-    mutex.lock();
-    exit = true;
-    sleepCondition.notify_one();
-    mutex.unlock();
-    nativeThread.join();
+   
+   mutex.lock();
+   exit = true;
+   sleepCondition.notify_one();
+   mutex.unlock();
+   nativeThread.join();
 }
 
 
@@ -62,57 +62,57 @@ Thread::~Thread() {
 /// until not searching
 
 void Thread::wait_for_search_finished() {
-    
-    std::unique_lock<Mutex> lk(mutex);
-    sleepCondition.wait(lk, [&]{ return !searching; });
+   
+   std::unique_lock<Mutex> lk(mutex);
+   sleepCondition.wait(lk, [&]{ return !searching; });
 }
 
 
 /// Thread::wait() waits on sleep condition until condition is true
 
 void Thread::wait(std::atomic_bool& condition) {
-    
-    std::unique_lock<Mutex> lk(mutex);
-    sleepCondition.wait(lk, [&]{ return bool(condition); });
+   
+   std::unique_lock<Mutex> lk(mutex);
+   sleepCondition.wait(lk, [&]{ return bool(condition); });
 }
 
 
 /// Thread::start_searching() wakes up the thread that will start the search
 
 void Thread::start_searching(bool resume) {
-    
-    std::unique_lock<Mutex> lk(mutex);
-    
-    if (!resume)
-        searching = true;
-    
-    sleepCondition.notify_one();
+   
+   std::unique_lock<Mutex> lk(mutex);
+   
+   if (!resume)
+      searching = true;
+   
+   sleepCondition.notify_one();
 }
 
 
 /// Thread::idle_loop() is where the thread is parked when it has no work to do
 
 void Thread::idle_loop() {
-    
-    WinProcGroup::bindThisThread(idx);
-    
-    while (!exit)
-    {
-        std::unique_lock<Mutex> lk(mutex);
-        
-        searching = false;
-        
-        while (!searching && !exit)
-        {
-            sleepCondition.notify_one(); // Wake up any waiting thread
-            sleepCondition.wait(lk);
-        }
-        
-        lk.unlock();
-        
-        if (!exit)
-            search();
-    }
+   
+   WinProcGroup::bindThisThread(idx);
+   
+   while (!exit)
+   {
+      std::unique_lock<Mutex> lk(mutex);
+      
+      searching = false;
+      
+      while (!searching && !exit)
+      {
+         sleepCondition.notify_one(); // Wake up any waiting thread
+         sleepCondition.wait(lk);
+      }
+      
+      lk.unlock();
+      
+      if (!exit)
+         search();
+   }
 }
 
 
@@ -122,9 +122,9 @@ void Thread::idle_loop() {
 /// allocation of Endgames in the Thread constructor.
 
 void ThreadPool::init() {
-    
-    push_back(new MainThread());
-    read_uci_options();
+   
+   push_back(new MainThread());
+   read_uci_options();
 }
 
 
@@ -133,9 +133,9 @@ void ThreadPool::init() {
 /// static objects while still in main().
 
 void ThreadPool::exit() {
-    
-    while (size())
-        delete back(), pop_back();
+   
+   while (size())
+      delete back(), pop_back();
 }
 
 
@@ -144,38 +144,38 @@ void ThreadPool::exit() {
 /// number. Thread objects are dynamically allocated.
 
 void ThreadPool::read_uci_options() {
-    
-    size_t requested = Options["Threads"];
-    
-    //assert(requested > 0);
-    
-    while (size() < requested)
-        push_back(new Thread());
-    
-    while (size() > requested)
-        delete back(), pop_back();
+   
+   size_t requested = Options["Threads"];
+   
+   //assert(requested > 0);
+   
+   while (size() < requested)
+      push_back(new Thread());
+   
+   while (size() > requested)
+      delete back(), pop_back();
 }
 
 
 /// ThreadPool::nodes_searched() returns the number of nodes searched
 
 uint64_t ThreadPool::nodes_searched() const {
-    
-    uint64_t nodes = 0;
-    for (Thread* th : *this)
-        nodes += th->rootPos.nodes_searched();
-    return nodes;
+   
+   uint64_t nodes = 0;
+   for (Thread* th : *this)
+      nodes += th->rootPos.nodes_searched();
+   return nodes;
 }
 
 
 /// ThreadPool::tb_hits() returns the number of TB hits
 
 uint64_t ThreadPool::tb_hits() const {
-    
-    uint64_t hits = 0;
-    for (Thread* th : *this)
-        hits += th->tbHits;
-    return hits;
+   
+   uint64_t hits = 0;
+   for (Thread* th : *this)
+      hits += th->tbHits;
+   return hits;
 }
 
 
@@ -184,40 +184,40 @@ uint64_t ThreadPool::tb_hits() const {
 
 void ThreadPool::start_thinking(Position& pos, StateListPtr& states,
                                 const Search::LimitsType& limits) {
-    
-    main()->wait_for_search_finished();
-    
-    Search::Signals.stopOnPonderhit = Search::Signals.stop = false;
-    Search::Limits = limits;
-    Search::RootMoves rootMoves;
-    
-    for (const auto& m : MoveList<LEGAL>(pos))
-        if (   limits.searchmoves.empty()
-            || std::count(limits.searchmoves.begin(), limits.searchmoves.end(), m))
-            rootMoves.push_back(Search::RootMove(m));
-    
-    if (!rootMoves.empty())
-        Tablebases::filter_root_moves(pos, rootMoves);
-    
-    // After ownership transfer 'states' becomes empty, so if we stop the search
-    // and call 'go' again without setting a new position states.get() == NULL.
-    //assert(states.get() || setupStates.get());
-    
-    if (states.get())
-        setupStates = std::move(states); // Ownership transfer, states is now empty
-    
-    StateInfo tmp = setupStates->back();
-    
-    for (Thread* th : Threads)
-    {
-        th->maxPly = 0;
-        th->tbHits = 0;
-        th->rootDepth = DEPTH_ZERO;
-        th->rootMoves = rootMoves;
-        th->rootPos.set(pos.fen(), pos.is_chess960(), &setupStates->back(), th);
-    }
-    
-    setupStates->back() = tmp; // Restore st->previous, cleared by Position::set()
-    
-    main()->start_searching();
+   
+   main()->wait_for_search_finished();
+   
+   Search::Signals.stopOnPonderhit = Search::Signals.stop = false;
+   Search::Limits = limits;
+   Search::RootMoves rootMoves;
+   
+   for (const auto& m : MoveList<LEGAL>(pos))
+      if (   limits.searchmoves.empty()
+          || std::count(limits.searchmoves.begin(), limits.searchmoves.end(), m))
+         rootMoves.push_back(Search::RootMove(m));
+   
+   if (!rootMoves.empty())
+      Tablebases::filter_root_moves(pos, rootMoves);
+   
+   // After ownership transfer 'states' becomes empty, so if we stop the search
+   // and call 'go' again without setting a new position states.get() == NULL.
+   //assert(states.get() || setupStates.get());
+   
+   if (states.get())
+      setupStates = std::move(states); // Ownership transfer, states is now empty
+   
+   StateInfo tmp = setupStates->back();
+   
+   for (Thread* th : Threads)
+   {
+      th->maxPly = 0;
+      th->tbHits = 0;
+      th->rootDepth = DEPTH_ZERO;
+      th->rootMoves = rootMoves;
+      th->rootPos.set(pos.fen(), pos.is_chess960(), &setupStates->back(), th);
+   }
+   
+   setupStates->back() = tmp; // Restore st->previous, cleared by Position::set()
+   
+   main()->start_searching();
 }

@@ -32,25 +32,25 @@
 /// HistoryStats records how often quiet moves have been successful or unsuccessful
 /// during the current search, and is used for reduction and move ordering decisions.
 struct HistoryStats {
-    
-    static const Value Max = Value(1 << 28);
-    
-    Value get(Color c, Move m) const { return table[c][from_sq(m)][to_sq(m)]; }
-    void clear() { std::memset(table, 0, sizeof(table)); }
-    void update(Color c, Move m, Value v) {
-        
-        if (abs(int(v)) >= 324)
-            return;
-        
-        Square from = from_sq(m);
-        Square to = to_sq(m);
-        
-        table[c][from][to] -= table[c][from][to] * abs(int(v)) / 324;
-        table[c][from][to] += int(v) * 32;
-    }
-    
+   
+   static const Value Max = Value(1 << 28);
+   
+   Value get(Color c, Move m) const { return table[c][from_sq(m)][to_sq(m)]; }
+   void clear() { std::memset(table, 0, sizeof(table)); }
+   void update(Color c, Move m, Value v) {
+      
+      if (abs(int(v)) >= 324)
+         return;
+      
+      Square from = from_sq(m);
+      Square to = to_sq(m);
+      
+      table[c][from][to] -= table[c][from][to] * abs(int(v)) / 324;
+      table[c][from][to] += int(v) * 32;
+   }
+   
 private:
-    Value table[COLOR_NB][SQUARE_NB][SQUARE_NB];
+   Value table[COLOR_NB][SQUARE_NB][SQUARE_NB];
 };
 
 
@@ -62,21 +62,21 @@ private:
 /// considered identical.
 template<typename T>
 struct Stats {
-    const T* operator[](Piece pc) const { return table[pc]; }
-    T* operator[](Piece pc) { return table[pc]; }
-    void clear() { std::memset(table, 0, sizeof(table)); }
-    void update(Piece pc, Square to, Move m) { table[pc][to] = m; }
-    void update(Piece pc, Square to, Value v) {
-        
-        if (abs(int(v)) >= 324)
-            return;
-        
-        table[pc][to] -= table[pc][to] * abs(int(v)) / 936;
-        table[pc][to] += int(v) * 32;
-    }
-    
+   const T* operator[](Piece pc) const { return table[pc]; }
+   T* operator[](Piece pc) { return table[pc]; }
+   void clear() { std::memset(table, 0, sizeof(table)); }
+   void update(Piece pc, Square to, Move m) { table[pc][to] = m; }
+   void update(Piece pc, Square to, Value v) {
+      
+      if (abs(int(v)) >= 324)
+         return;
+      
+      table[pc][to] -= table[pc][to] * abs(int(v)) / 936;
+      table[pc][to] += int(v) * 32;
+   }
+   
 private:
-    T table[PIECE_NB][SQUARE_NB];
+   T table[PIECE_NB][SQUARE_NB];
 };
 
 typedef Stats<Move> MoveStats;
@@ -94,30 +94,30 @@ namespace Search { struct Stack; }
 
 class MovePicker {
 public:
-    MovePicker(const MovePicker&) = delete;
-    MovePicker& operator=(const MovePicker&) = delete;
-    
-    MovePicker(const Position&, Move, Value);
-    MovePicker(const Position&, Move, Depth, Square);
-    MovePicker(const Position&, Move, Depth, Search::Stack*);
-    
-    Move next_move();
-    
+   MovePicker(const MovePicker&) = delete;
+   MovePicker& operator=(const MovePicker&) = delete;
+   
+   MovePicker(const Position&, Move, Value);
+   MovePicker(const Position&, Move, Depth, Square);
+   MovePicker(const Position&, Move, Depth, Search::Stack*);
+   
+   Move next_move();
+   
 private:
-    template<GenType> void score();
-    ExtMove* begin() { return cur; }
-    ExtMove* end() { return endMoves; }
-    
-    const Position& pos;
-    const Search::Stack* ss;
-    Move countermove;
-    Depth depth;
-    Move ttMove;
-    Square recaptureSquare;
-    Value threshold;
-    int stage;
-    ExtMove *cur, *endMoves, *endBadCaptures;
-    ExtMove moves[MAX_MOVES];
+   template<GenType> void score();
+   ExtMove* begin() { return cur; }
+   ExtMove* end() { return endMoves; }
+   
+   const Position& pos;
+   const Search::Stack* ss;
+   Move countermove;
+   Depth depth;
+   Move ttMove;
+   Square recaptureSquare;
+   Value threshold;
+   int stage;
+   ExtMove *cur, *endMoves, *endBadCaptures;
+   ExtMove moves[MAX_MOVES];
 };
 
 #endif // #ifndef MOVEPICK_H_INCLUDED

@@ -41,16 +41,16 @@ void dbg_print();
 typedef std::chrono::milliseconds::rep TimePoint; // A value in milliseconds
 
 inline TimePoint now() {
-    return std::chrono::duration_cast<std::chrono::milliseconds>
-    (std::chrono::steady_clock::now().time_since_epoch()).count();
+   return std::chrono::duration_cast<std::chrono::milliseconds>
+   (std::chrono::steady_clock::now().time_since_epoch()).count();
 }
 
 template<class Entry, int Size>
 struct HashTable {
-    Entry* operator[](Key key) { return &table[(uint32_t)key & (Size - 1)]; }
-    
+   Entry* operator[](Key key) { return &table[(uint32_t)key & (Size - 1)]; }
+   
 private:
-    std::vector<Entry> table = std::vector<Entry>(Size);
+   std::vector<Entry> table = std::vector<Entry>(Size);
 };
 
 
@@ -77,24 +77,24 @@ std::ostream& operator<<(std::ostream&, SyncCout);
 ///   <http://vigna.di.unimi.it/ftp/papers/xorshift.pdf>
 
 class PRNG {
-    
-    uint64_t s;
-    
-    uint64_t rand64() {
-        
-        s ^= s >> 12, s ^= s << 25, s ^= s >> 27;
-        return s * 2685821657736338717LL;
-    }
-    
+   
+   uint64_t s;
+   
+   uint64_t rand64() {
+      
+      s ^= s >> 12, s ^= s << 25, s ^= s >> 27;
+      return s * 2685821657736338717LL;
+   }
+   
 public:
-    PRNG(uint64_t seed) : s(seed) { assert(seed); }
-    
-    template<typename T> T rand() { return T(rand64()); }
-    
-    /// Special generator used to fast init magic numbers.
-    /// Output values only have 1/8th of their bits set on average.
-    template<typename T> T sparse_rand()
-    { return T(rand64() & rand64() & rand64()); }
+   PRNG(uint64_t seed) : s(seed) { assert(seed); }
+   
+   template<typename T> T rand() { return T(rand64()); }
+   
+   /// Special generator used to fast init magic numbers.
+   /// Output values only have 1/8th of their bits set on average.
+   template<typename T> T sparse_rand()
+   { return T(rand64() & rand64() & rand64()); }
 };
 
 
@@ -105,7 +105,7 @@ public:
 /// Peter Österlund.
 
 namespace WinProcGroup {
-    void bindThisThread(size_t idx);
+void bindThisThread(size_t idx);
 }
 
 #endif // #ifndef MISC_H_INCLUDED

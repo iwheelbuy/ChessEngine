@@ -10,7 +10,6 @@
 #define NOTATION_H_INCLUDED
 
 #include <string>
-
 #include "types.h"
 
 class Position;

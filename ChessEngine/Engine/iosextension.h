@@ -45,4 +45,3 @@ extern int get_command(std::string &cmd);
 extern void command_to_engine(const std::string &command);
 extern void wake_up_listener();
 extern void execute_command(const std::string &cmd);
-

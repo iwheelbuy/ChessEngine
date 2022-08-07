@@ -43,132 +43,132 @@
 
 // PSQT is in Stockfish 8
 namespace PSQT {
-    void init();
+void init();
 }
 
 using std::string;
 
 namespace {
-    string CurrentMove;
-    int CurrentMoveNumber;
-    int TotalMoveCount;
-    int CurrentDepth;
+string CurrentMove;
+int CurrentMoveNumber;
+int TotalMoveCount;
+int CurrentDepth;
 }
 
 void engine_init() {
-    UCI::init(Options);
-    PSQT::init();
-    Bitboards::init();
-    Position::init();
-    Bitbases::init();
-    Search::init();
-    Pawns::init();
-    Threads.init();
-    Tablebases::init(Options["SyzygyPath"]);
-    TT.resize(Options["Hash"]);
+   UCI::init(Options);
+   PSQT::init();
+   Bitboards::init();
+   Position::init();
+   Bitbases::init();
+   Search::init();
+   Pawns::init();
+   Threads.init();
+   Tablebases::init(Options["SyzygyPath"]);
+   TT.resize(Options["Hash"]);
 }
 
 
 void engine_exit() {
-    Search::clear();
-    Threads.exit();
+   Search::clear();
+   Threads.exit();
 }
 
 
 void pv_to_ui(const string &pv, int depth, int score, int scoreType, bool mate) {
-    NSString *string = [[NSString alloc] initWithUTF8String: pv.c_str()];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [SharedEngineController sendPrincipalVariation:string];
-    });
+   NSString *string = [[NSString alloc] initWithUTF8String: pv.c_str()];
+
+   dispatch_async(dispatch_get_main_queue(), ^{
+      [SharedEngineController sendPrincipalVariation:string];
+   });
 }
 
 void pv_to_ui2(const string &pv) {
-    NSString *string = [[NSString alloc] initWithUTF8String: pv.c_str()];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [SharedEngineController sendPrincipalVariation:string];
-    });
+   NSString *string = [[NSString alloc] initWithUTF8String: pv.c_str()];
+
+   dispatch_async(dispatch_get_main_queue(), ^{
+      [SharedEngineController sendPrincipalVariation:string];
+   });
 }
 
 
 void currmove_to_ui(const string currmove, int currmovenum, int movenum, int depth) {
-    CurrentMove = currmove;
-    CurrentMoveNumber = currmovenum;
-    CurrentDepth = depth;
-    TotalMoveCount = movenum;
-    
-    NSString *move = [[NSString alloc] initWithUTF8String:currmove.c_str()];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        [SharedEngineController sendCurrentMove:move number:CurrentMoveNumber depth:CurrentDepth totalMoves:TotalMoveCount];
-    });
+   CurrentMove = currmove;
+   CurrentMoveNumber = currmovenum;
+   CurrentDepth = depth;
+   TotalMoveCount = movenum;
+
+   NSString *move = [[NSString alloc] initWithUTF8String:currmove.c_str()];
+
+   dispatch_async(dispatch_get_main_queue(), ^{
+
+      [SharedEngineController sendCurrentMove:move number:CurrentMoveNumber depth:CurrentDepth totalMoves:TotalMoveCount];
+   });
 }
 
 static const string time_string(int millisecs) {
-    
-    const int MSecMinute = 1000 * 60;
-    const int MSecHour   = 1000 * 60 * 60;
-    
-    std::stringstream s;
-    s << std::setfill('0');
-    
-    int hours = millisecs / MSecHour;
-    int minutes = (millisecs - hours * MSecHour) / MSecMinute;
-    int seconds = (millisecs - hours * MSecHour - minutes * MSecMinute) / 1000;
-    
-    if (hours)
-        s << hours << ':';
-    
-    s << std::setw(2) << minutes << ':' << std::setw(2) << seconds;
-    return s.str();
+
+   const int MSecMinute = 1000 * 60;
+   const int MSecHour   = 1000 * 60 * 60;
+
+   std::stringstream s;
+   s << std::setfill('0');
+
+   int hours = millisecs / MSecHour;
+   int minutes = (millisecs - hours * MSecHour) / MSecMinute;
+   int seconds = (millisecs - hours * MSecHour - minutes * MSecMinute) / 1000;
+
+   if (hours)
+      s << hours << ':';
+
+   s << std::setw(2) << minutes << ':' << std::setw(2) << seconds;
+   return s.str();
 }
 
 void searchstats_to_ui(int64_t nodes, long time) {
-    
-    std::stringstream s;
-    s << " " << time_string((int)time) << "  " << CurrentDepth
-    << "  " << CurrentMove
-    << " (" << CurrentMoveNumber << "/" << TotalMoveCount << ")"
-    << "  ";
-    if (nodes < 1000000000)
-        s << nodes/1000 << "kN";
-    else
-        s << std::setiosflags(std::ios::fixed) << std::setprecision(1) << nodes/1000000.0 << "MN";
-    if(time > 0)
-        s << std::setiosflags(std::ios::fixed) << std::setprecision(1)
-        << "  " <<  (nodes*1.0) / time << "kN/s";
-    
-    NSString *string = [[NSString alloc] initWithUTF8String: s.str().c_str()];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [SharedEngineController sendSearchingStatus:string];
-    });
+
+   std::stringstream s;
+   s << " " << time_string((int)time) << "  " << CurrentDepth
+   << "  " << CurrentMove
+   << " (" << CurrentMoveNumber << "/" << TotalMoveCount << ")"
+   << "  ";
+   if (nodes < 1000000000)
+      s << nodes/1000 << "kN";
+   else
+      s << std::setiosflags(std::ios::fixed) << std::setprecision(1) << nodes/1000000.0 << "MN";
+   if(time > 0)
+      s << std::setiosflags(std::ios::fixed) << std::setprecision(1)
+      << "  " <<  (nodes*1.0) / time << "kN/s";
+
+   NSString *string = [[NSString alloc] initWithUTF8String: s.str().c_str()];
+
+   dispatch_async(dispatch_get_main_queue(), ^{
+      [SharedEngineController sendSearchingStatus:string];
+   });
 }
 
 
 void bestmove_to_ui(const string &best, const string &ponder) {
-    NSString *bestString = [[NSString alloc] initWithUTF8String: best.c_str()];
-    NSString *ponderString;
-    if (!ponder.empty()) {
-        ponderString = [[NSString alloc] initWithUTF8String: ponder.c_str()];
-    } else {
-        ponderString = nil;
-    }
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [SharedEngineController sendBestMove:bestString ponderMove:ponderString];
-    });
+   NSString *bestString = [[NSString alloc] initWithUTF8String: best.c_str()];
+   NSString *ponderString;
+   if (!ponder.empty()) {
+      ponderString = [[NSString alloc] initWithUTF8String: ponder.c_str()];
+   } else {
+      ponderString = nil;
+   }
+
+   dispatch_async(dispatch_get_main_queue(), ^{
+      [SharedEngineController sendBestMove:bestString ponderMove:ponderString];
+   });
 }
 
 
 extern void execute_command(const string &command);
 
 void command_to_engine(const string &command) {
-    execute_command(command);
+   execute_command(command);
 }
 
 bool command_is_waiting() {
-    return [SharedEngineController commandIsWaiting];
+   return [SharedEngineController commandIsWaiting];
 }
