@@ -2,18 +2,18 @@
  Stockfish, a UCI chess playing engine derived from Glaurung 2.1
  Copyright (C) 2004-2008 Tord Romstad (Glaurung author)
  Copyright (C) 2008-2015 Marco Costalba, Joona Kiiski, Tord Romstad
- Copyright (C) 2015-2017 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
- 
+ Copyright (C) 2015-2016 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
+
  Stockfish is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
- 
+
  Stockfish is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
- 
+
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -64,20 +64,20 @@ const vector<string> Defaults = {
    "1r3k2/4q3/2Pp3b/3Bp3/2Q2p2/1p1P2P1/1P2KP2/3N4 w - - 0 1",
    "6k1/4pp1p/3p2p1/P1pPb3/R7/1r2P1PP/3B1P2/6K1 w - - 0 1",
    "8/3p3B/5p2/5P2/p7/PP5b/k7/6K1 w - - 0 1",
-   
+
    // 5-man positions
    "8/8/8/8/5kp1/P7/8/1K1N4 w - - 0 1",     // Kc2 - mate
    "8/8/8/5N2/8/p7/8/2NK3k w - - 0 1",      // Na2 - mate
    "8/3k4/8/8/8/4B3/4KB2/2B5 w - - 0 1",    // draw
-   
+
    // 6-man positions
    "8/8/1P6/5pr1/8/4R3/7k/2K5 w - - 0 1",   // Re5 - mate
    "8/2p4P/8/kr6/6R1/8/8/1K6 w - - 0 1",    // Ka2 - mate
    "8/8/3P3k/8/1p6/8/1P6/1K3n2 b - - 0 1",  // Nd2 - draw
-   
+
    // 7-man positions
    "8/R7/2q5/8/6k1/8/1P5p/K6R w - - 0 124", // Draw
-   
+
    // Mate and stalemate positions
    "8/8/8/8/8/6k1/6p1/6K1 w - -",
    "5k2/5P2/5K2/8/8/8/8/8 b - -",
@@ -97,72 +97,72 @@ const vector<string> Defaults = {
 /// limit value: depth (default), time in millisecs or number of nodes.
 
 void benchmark(const Position& current, istream& is) {
-   
+
    string token;
    vector<string> fens;
    Search::LimitsType limits;
-   
+
    // Assign default values to missing arguments
    string ttSize    = (is >> token) ? token : "16";
    string threads   = (is >> token) ? token : "1";
    string limit     = (is >> token) ? token : "13";
    string fenFile   = (is >> token) ? token : "default";
    string limitType = (is >> token) ? token : "depth";
-   
+
    Options["Hash"]    = ttSize;
    Options["Threads"] = threads;
    Search::clear();
-   
+
    if (limitType == "time")
       limits.movetime = stoi(limit); // movetime is in millisecs
-   
+
    else if (limitType == "nodes")
-      limits.nodes = stoll(limit);
-   
+      limits.nodes = stoi(limit);
+
    else if (limitType == "mate")
       limits.mate = stoi(limit);
-   
+
    else
       limits.depth = stoi(limit);
-   
+
    if (fenFile == "default")
       fens = Defaults;
-   
+
    else if (fenFile == "current")
       fens.push_back(current.fen());
-   
+
    else
    {
       string fen;
       ifstream file(fenFile);
-      
+
       if (!file.is_open())
       {
          cerr << "Unable to open file " << fenFile << endl;
          return;
       }
-      
+
       while (getline(file, fen))
          if (!fen.empty())
             fens.push_back(fen);
-      
+
       file.close();
    }
-   
+
    uint64_t nodes = 0;
    TimePoint elapsed = now();
    Position pos;
-   
+
    for (size_t i = 0; i < fens.size(); ++i)
    {
       StateListPtr states(new std::deque<StateInfo>(1));
       pos.set(fens[i], Options["UCI_Chess960"], &states->back(), Threads.main());
-      
+
       cerr << "\nPosition: " << i + 1 << '/' << fens.size() << endl;
-      
+
       if (limitType == "perft")
          nodes += Search::perft(pos, limits.depth * ONE_PLY);
-      
+
       else
       {
          limits.startTime = now();
@@ -171,11 +171,11 @@ void benchmark(const Position& current, istream& is) {
          nodes += Threads.nodes_searched();
       }
    }
-   
+
    elapsed = now() - elapsed + 1; // Ensure positivity to avoid a 'divide by zero'
-   
+
    dbg_print(); // Just before exiting
-   
+
    cerr << "\n==========================="
    << "\nTotal time (ms) : " << elapsed
    << "\nNodes searched  : " << nodes

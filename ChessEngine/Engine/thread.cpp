@@ -2,7 +2,7 @@
  Stockfish, a UCI chess playing engine derived from Glaurung 2.1
  Copyright (C) 2004-2008 Tord Romstad (Glaurung author)
  Copyright (C) 2008-2015 Marco Costalba, Joona Kiiski, Tord Romstad
- Copyright (C) 2015-2017 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
+ Copyright (C) 2015-2016 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
  
  Stockfish is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -37,6 +37,8 @@ Thread::Thread() {
    resetCalls = exit = false;
    maxPly = callsCnt = 0;
    tbHits = 0;
+   history.clear();
+   counterMoves.clear();
    idx = Threads.size(); // Start from 0
    
    std::unique_lock<Mutex> lk(mutex);
@@ -94,8 +96,6 @@ void Thread::start_searching(bool resume) {
 
 void Thread::idle_loop() {
    
-   WinProcGroup::bindThisThread(idx);
-   
    while (!exit)
    {
       std::unique_lock<Mutex> lk(mutex);
@@ -123,7 +123,7 @@ void Thread::idle_loop() {
 
 void ThreadPool::init() {
    
-   push_back(new MainThread());
+   push_back(new MainThread);
    read_uci_options();
 }
 
@@ -147,10 +147,10 @@ void ThreadPool::read_uci_options() {
    
    size_t requested = Options["Threads"];
    
-   //assert(requested > 0);
+   assert(requested > 0);
    
    while (size() < requested)
-      push_back(new Thread());
+      push_back(new Thread);
    
    while (size() > requested)
       delete back(), pop_back();
@@ -201,7 +201,7 @@ void ThreadPool::start_thinking(Position& pos, StateListPtr& states,
    
    // After ownership transfer 'states' becomes empty, so if we stop the search
    // and call 'go' again without setting a new position states.get() == NULL.
-   //assert(states.get() || setupStates.get());
+   assert(states.get() || setupStates.get());
    
    if (states.get())
       setupStates = std::move(states); // Ownership transfer, states is now empty

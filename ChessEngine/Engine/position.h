@@ -2,7 +2,7 @@
  Stockfish, a UCI chess playing engine derived from Glaurung 2.1
  Copyright (C) 2004-2008 Tord Romstad (Glaurung author)
  Copyright (C) 2008-2015 Marco Costalba, Joona Kiiski, Tord Romstad
- Copyright (C) 2015-2017 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
+ Copyright (C) 2015-2016 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
  
  Stockfish is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -28,6 +28,7 @@
 
 #include "bitboard.h"
 #include "types.h"
+
 
 /// StateInfo struct stores information needed to restore a Position object to
 /// its previous state when we retract a move. Whenever a move is made on the
@@ -70,19 +71,11 @@ public:
    static void init();
    
    Position() = default;
-   
-   // PUSH iOS
-   // Modification: This constructor was in the original implementation of `stockfish`, but is later removed in the new version. I keep it here for the convenience use (for iOS operating system).
-   Position(const std::string& fenStr, bool isChess960, StateInfo* si, Thread* th) { set(fenStr, isChess960, si, th); }
-   Position(const Position& pos, Thread* t) { set(pos.fen(), pos.is_chess960(), pos.st, t); }
-   // POP iOS
-   
    Position(const Position&) = delete;
    Position& operator=(const Position&) = delete;
    
    // FEN string input/output
    Position& set(const std::string& fenStr, bool isChess960, StateInfo* si, Thread* th);
-   Position& set(const std::string& code, Color c, StateInfo* si);
    const std::string fen() const;
    
    // Position representation
@@ -134,10 +127,9 @@ public:
    bool opposite_bishops() const;
    
    // Doing and undoing moves
-   void do_move(Move m, StateInfo& newSt);
-   void do_move(Move m, StateInfo& newSt, bool givesCheck);
+   void do_move(Move m, StateInfo& st, bool givesCheck);
    void undo_move(Move m);
-   void do_null_move(StateInfo& newSt);
+   void do_null_move(StateInfo& st);
    void undo_null_move();
    
    // Static Exchange Evaluation
@@ -156,7 +148,7 @@ public:
    bool is_chess960() const;
    Thread* this_thread() const;
    uint64_t nodes_searched() const;
-   bool is_draw(int ply) const;
+   bool is_draw() const;
    int rule50_count() const;
    Score psq_score() const;
    Value non_pawn_material(Color c) const;
@@ -247,7 +239,7 @@ template<PieceType Pt> inline const Square* Position::squares(Color c) const {
 }
 
 template<PieceType Pt> inline Square Position::square(Color c) const {
-   //assert(pieceCount[make_piece(c, Pt)] == 1);
+   assert(pieceCount[make_piece(c, Pt)] == 1);
    return pieceList[make_piece(c, Pt)][0];
 }
 
@@ -359,12 +351,12 @@ inline bool Position::is_chess960() const {
 }
 
 inline bool Position::capture_or_promotion(Move m) const {
-   //assert(is_ok(m));
+   assert(is_ok(m));
    return type_of(m) != NORMAL ? type_of(m) != CASTLING : !empty(to_sq(m));
 }
 
 inline bool Position::capture(Move m) const {
-   //assert(is_ok(m));
+   assert(is_ok(m));
    // Castling is encoded as "king captures rook"
    return (!empty(to_sq(m)) && type_of(m) != CASTLING) || type_of(m) == ENPASSANT;
 }
@@ -417,10 +409,6 @@ inline void Position::move_piece(Piece pc, Square from, Square to) {
    board[to] = pc;
    index[to] = index[from];
    pieceList[pc][index[to]] = to;
-}
-
-inline void Position::do_move(Move m, StateInfo& newSt) {
-   do_move(m, newSt, gives_check(m));
 }
 
 #endif // #ifndef POSITION_H_INCLUDED
