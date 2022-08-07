@@ -2,7 +2,7 @@
  Stockfish, a UCI chess playing engine derived from Glaurung 2.1
  Copyright (C) 2004-2008 Tord Romstad (Glaurung author)
  Copyright (C) 2008-2015 Marco Costalba, Joona Kiiski, Tord Romstad
- Copyright (C) 2015-2017 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
+ Copyright (C) 2015-2016 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
  
  Stockfish is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -29,7 +29,6 @@
 #include "thread.h"
 #include "timeman.h"
 #include "uci.h"
-#include "syzygy/tbprobe.h"
 
 using namespace std;
 
@@ -76,7 +75,7 @@ void position(Position& pos, istringstream& is) {
    while (is >> token && (m = UCI::to_move(pos, token)) != MOVE_NONE)
    {
       States->push_back(StateInfo());
-      pos.do_move(m, States->back());
+      pos.do_move(m, States->back(), pos.gives_check(m));
    }
 }
 
@@ -138,67 +137,6 @@ void go(Position& pos, istringstream& is) {
 
 } // namespace
 
-// PUSH iOS
-void execute_command(const string &cmd) {
-   static Position pos(StartFEN, Options["UCI_Chess960"], &States->back(), Threads.main());
-   
-   string token;
-   istringstream is(cmd);
-   is >> skipws >> token;
-   
-   // The GUI sends 'ponderhit' to tell us to ponder on the same move the
-   // opponent has played. In case Signals.stopOnPonderhit is set we are
-   // waiting for 'ponderhit' to stop the search (for instance because we
-   // already ran out of time), otherwise we should continue searching but
-   // switching from pondering to normal search.
-   if (    token == "quit"
-       ||  token == "stop"
-       || (token == "ponderhit" && Search::Signals.stopOnPonderhit))
-   {
-      Search::Signals.stop = true;
-      Threads.main()->start_searching(true); // Could be sleeping
-   }
-   else if (token == "ponderhit")
-      Search::Limits.ponder = 0; // Switch to normal search
-   
-   else if (token == "uci") {
-      //        sync_cout << "id name " << engine_info(true)
-      //        << "\n"       << Options
-      //        << "\nuciok"  << sync_endl;
-   }
-   
-   else if (token == "ucinewgame")
-   {
-      Search::clear();
-      Tablebases::init(Options["SyzygyPath"]);
-      Time.availableNodes = 0;
-   }
-   else if (token == "isready")    sync_cout << "readyok" << sync_endl;
-   else if (token == "go")         go(pos, is);
-   else if (token == "position")   position(pos, is);
-   else if (token == "setoption")  setoption(is);
-   
-   // Additional custom non-UCI commands, useful for debugging
-   else if (token == "flip")       pos.flip();
-   else if (token == "bench")      benchmark(pos, is);
-   else if (token == "d")          sync_cout << pos << sync_endl;
-   else if (token == "eval")       sync_cout << Eval::trace(pos) << sync_endl;
-   else if (token == "perft")
-   {
-      int depth;
-      stringstream ss;
-      
-      is >> depth;
-      ss << Options["Hash"]    << " "
-      << Options["Threads"] << " " << depth << " current perft";
-      
-      benchmark(pos, ss);
-   }
-   else
-      sync_cout << "Unknown command: " << cmd << sync_endl;
-}
-// POP iOS
-
 
 /// UCI::loop() waits for a command from stdin, parses it and calls the appropriate
 /// function. Also intercepts EOF from stdin to ensure gracefully exiting if the
@@ -208,12 +146,10 @@ void execute_command(const string &cmd) {
 
 void UCI::loop(int argc, char* argv[]) {
    
-   //    Position pos;
-   //    string token, cmd;
-   //
-   //    pos.set(StartFEN, false, &States->back(), Threads.main());
-   
+   Position pos;
    string token, cmd;
+   
+   pos.set(StartFEN, false, &States->back(), Threads.main());
    
    for (int i = 1; i < argc; ++i)
       cmd += std::string(argv[i]) + " ";
@@ -223,13 +159,58 @@ void UCI::loop(int argc, char* argv[]) {
          cmd = "quit";
       
       istringstream is(cmd);
+      
       token.clear(); // getline() could return empty or blank line
       is >> skipws >> token;
       
-      // PUSH iOS
-      // Modification: Moved the rest of the function out to the separate `execute_command()` function, because we need to be able to call it from outside this loop.
-      execute_command(cmd);
-      // POP iOS
+      // The GUI sends 'ponderhit' to tell us to ponder on the same move the
+      // opponent has played. In case Signals.stopOnPonderhit is set we are
+      // waiting for 'ponderhit' to stop the search (for instance because we
+      // already ran out of time), otherwise we should continue searching but
+      // switching from pondering to normal search.
+      if (    token == "quit"
+          ||  token == "stop"
+          || (token == "ponderhit" && Search::Signals.stopOnPonderhit))
+      {
+         Search::Signals.stop = true;
+         Threads.main()->start_searching(true); // Could be sleeping
+      }
+      else if (token == "ponderhit")
+         Search::Limits.ponder = 0; // Switch to normal search
+      
+      else if (token == "uci")
+         sync_cout << "id name " << engine_info(true)
+         << "\n"       << Options
+         << "\nuciok"  << sync_endl;
+      
+      else if (token == "ucinewgame")
+      {
+         Search::clear();
+         Time.availableNodes = 0;
+      }
+      else if (token == "isready")    sync_cout << "readyok" << sync_endl;
+      else if (token == "go")         go(pos, is);
+      else if (token == "position")   position(pos, is);
+      else if (token == "setoption")  setoption(is);
+      
+      // Additional custom non-UCI commands, useful for debugging
+      else if (token == "flip")       pos.flip();
+      else if (token == "bench")      benchmark(pos, is);
+      else if (token == "d")          sync_cout << pos << sync_endl;
+      else if (token == "eval")       sync_cout << Eval::trace(pos) << sync_endl;
+      else if (token == "perft")
+      {
+         int depth;
+         stringstream ss;
+         
+         is >> depth;
+         ss << Options["Hash"]    << " "
+         << Options["Threads"] << " " << depth << " current perft";
+         
+         benchmark(pos, ss);
+      }
+      else
+         sync_cout << "Unknown command: " << cmd << sync_endl;
       
    } while (token != "quit" && argc == 1); // Passed args have one-shot behaviour
    
@@ -306,5 +287,3 @@ Move UCI::to_move(const Position& pos, string& str) {
    
    return MOVE_NONE;
 }
-
-

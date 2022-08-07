@@ -2,7 +2,7 @@
  Stockfish, a UCI chess playing engine derived from Glaurung 2.1
  Copyright (C) 2004-2008 Tord Romstad (Glaurung author)
  Copyright (C) 2008-2015 Marco Costalba, Joona Kiiski, Tord Romstad
- Copyright (C) 2015-2017 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
+ Copyright (C) 2015-2016 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
  
  Stockfish is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -40,7 +40,7 @@ ExtMove* generate_castling(const Position& pos, ExtMove* moveList, Color us) {
    Square kto = relative_square(us, KingSide ? SQ_G1 : SQ_C1);
    Bitboard enemies = pos.pieces(~us);
    
-   //assert(!pos.checkers());
+   assert(!pos.checkers());
    
    const Square K = Chess960 ? kto > kfrom ? WEST : EAST
    : KingSide    ? WEST : EAST;
@@ -204,7 +204,7 @@ ExtMove* generate_pawn_moves(const Position& pos, ExtMove* moveList, Bitboard ta
       
       if (pos.ep_square() != SQ_NONE)
       {
-         //assert(rank_of(pos.ep_square()) == relative_rank(Us, RANK_6));
+         assert(rank_of(pos.ep_square()) == relative_rank(Us, RANK_6));
          
          // An en passant capture can be an evasion only if the checking piece
          // is the double pushed pawn and so is in the target. Otherwise this
@@ -214,7 +214,7 @@ ExtMove* generate_pawn_moves(const Position& pos, ExtMove* moveList, Bitboard ta
          
          b1 = pawnsNotOn7 & pos.attacks_from<PAWN>(pos.ep_square(), Them);
          
-         //assert(b1);
+         assert(b1);
          
          while (b1)
             *moveList++ = make<ENPASSANT>(pop_lsb(&b1), pos.ep_square());
@@ -229,7 +229,7 @@ template<PieceType Pt, bool Checks>
 ExtMove* generate_moves(const Position& pos, ExtMove* moveList, Color us,
                         Bitboard target) {
    
-   //assert(Pt != KING && Pt != PAWN);
+   assert(Pt != KING && Pt != PAWN);
    
    const Square* pl = pos.squares<Pt>(us);
    
@@ -309,8 +309,8 @@ ExtMove* generate_all(const Position& pos, ExtMove* moveList, Bitboard target) {
 template<GenType Type>
 ExtMove* generate(const Position& pos, ExtMove* moveList) {
    
-   //assert(Type == CAPTURES || Type == QUIETS || Type == NON_EVASIONS);
-   //assert(!pos.checkers());
+   assert(Type == CAPTURES || Type == QUIETS || Type == NON_EVASIONS);
+   assert(!pos.checkers());
    
    Color us = pos.side_to_move();
    
@@ -333,7 +333,7 @@ template ExtMove* generate<NON_EVASIONS>(const Position&, ExtMove*);
 template<>
 ExtMove* generate<QUIET_CHECKS>(const Position& pos, ExtMove* moveList) {
    
-   //assert(!pos.checkers());
+   assert(!pos.checkers());
    
    Color us = pos.side_to_move();
    Bitboard dc = pos.discovered_check_candidates();
@@ -365,7 +365,7 @@ ExtMove* generate<QUIET_CHECKS>(const Position& pos, ExtMove* moveList) {
 template<>
 ExtMove* generate<EVASIONS>(const Position& pos, ExtMove* moveList) {
    
-   //assert(pos.checkers());
+   assert(pos.checkers());
    
    Color us = pos.side_to_move();
    Square ksq = pos.square<KING>(us);

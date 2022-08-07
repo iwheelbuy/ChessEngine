@@ -2,7 +2,7 @@
  Stockfish, a UCI chess playing engine derived from Glaurung 2.1
  Copyright (C) 2004-2008 Tord Romstad (Glaurung author)
  Copyright (C) 2008-2015 Marco Costalba, Joona Kiiski, Tord Romstad
- Copyright (C) 2015-2017 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
+ Copyright (C) 2015-2016 Marco Costalba, Joona Kiiski, Gary Linscott, Tord Romstad
  
  Stockfish is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -38,14 +38,15 @@ namespace Search {
 
 struct Stack {
    Move* pv;
-   CounterMoveStats* counterMoves;
    int ply;
    Move currentMove;
    Move excludedMove;
    Move killers[2];
    Value staticEval;
    Value history;
+   bool skipEarlyPruning;
    int moveCount;
+   CounterMoveStats* counterMoves;
 };
 
 
@@ -54,13 +55,13 @@ struct Stack {
 /// fail low). Score is normally set at -VALUE_INFINITE for all non-pv moves.
 
 struct RootMove {
-
+   
    explicit RootMove(Move m) : pv(1, m) {}
-
+   
    bool operator<(const RootMove& m) const { return m.score < score; } // Descending sort
    bool operator==(const Move& m) const { return pv[0] == m; }
    bool extract_ponder_from_tt(Position& pos);
-
+   
    Value score = -VALUE_INFINITE;
    Value previousScore = -VALUE_INFINITE;
    std::vector<Move> pv;
@@ -74,16 +75,16 @@ typedef std::vector<RootMove> RootMoves;
 /// if we have to ponder while it's our opponent's turn to move.
 
 struct LimitsType {
-
+   
    LimitsType() { // Init explicitly due to broken value-initialization of non POD in MSVC
       nodes = time[WHITE] = time[BLACK] = inc[WHITE] = inc[BLACK] =
       npmsec = movestogo = depth = movetime = mate = infinite = ponder = 0;
    }
-
+   
    bool use_time_management() const {
       return !(mate | movetime | depth | nodes | infinite);
    }
-
+   
    std::vector<Move> searchmoves;
    int time[COLOR_NB], inc[COLOR_NB], npmsec, movestogo, depth, movetime, mate, infinite, ponder;
    int64_t nodes;
@@ -93,6 +94,7 @@ struct LimitsType {
 
 /// SignalsType struct stores atomic flags updated during the search, typically
 /// in an async fashion e.g. to stop the search by the GUI.
+
 struct SignalsType {
    std::atomic_bool stop, stopOnPonderhit;
 };
