@@ -1,0 +1,1839 @@
+BCSymbolMap Version: 2.0
+Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk
+iPhoneOS15.5.sdk
+/Users/iwheelbuy/Library/Developer/Xcode/DerivedData/ChessEngine-gzxbjkapsckuznbylbzxxzwvielu/Build/Intermediates.noindex/ArchiveIntermediates/ChessEngine/IntermediateBuildFilesPath/ChessEngine.build/Release-iphoneos/ChessEngine.build/DerivedSources/ChessEngine_vers.c
+/Users/iwheelbuy/Documents/ChessEngine
+__ZN12_GLOBAL__N_19eval_initIL5Color0EEEvRK8PositionRNS_8EvalInfoE
+__ZN12_GLOBAL__N_19eval_initIL5Color1EEEvRK8PositionRNS_8EvalInfoE
+__ZN12_GLOBAL__N_114evaluate_spaceIL5Color0EEE5ScoreRK8PositionRKNS_8EvalInfoE
+__ZN12_GLOBAL__N_114evaluate_spaceIL5Color1EEE5ScoreRK8PositionRKNS_8EvalInfoE
+__ZN12_GLOBAL__N_119evaluate_initiativeERK8Positioni5Value
+__ZN12_GLOBAL__N_121evaluate_scale_factorERK8PositionRKNS_8EvalInfoE5Value
+__ZN12_GLOBAL__N_15TracelsERNSt3__113basic_ostreamIcNS1_11char_traitsIcEEEENS0_4TermE
+___clang_call_terminate
+__ZNSt3__116__pad_and_outputIcNS_11char_traitsIcEEEENS_19ostreambuf_iteratorIT_T0_EES6_PKS4_S8_S8_RNS_8ios_baseES4_
+__ZN5Pawns5Entry11king_safetyIL5Color0EEE5ScoreRK8Position6Square
+__ZN5Pawns5Entry11king_safetyIL5Color1EEE5ScoreRK8Position6Square
+__GLOBAL__sub_I_evaluate.cpp
+__ZN12_GLOBAL__N_113MobilityBonusE
+__ZN12_GLOBAL__N_17OutpostE
+__ZN12_GLOBAL__N_110RookOnFileE
+__ZN12_GLOBAL__N_116ThreatBySafePawnE
+__ZN12_GLOBAL__N_113ThreatByMinorE
+__ZN12_GLOBAL__N_112ThreatByRookE
+__ZN12_GLOBAL__N_112ThreatByKingE
+__ZN12_GLOBAL__N_110PassedFileE
+__ZN12_GLOBAL__N_115MinorBehindPawnE
+__ZN12_GLOBAL__N_111BishopPawnsE
+__ZN12_GLOBAL__N_110RookOnPawnE
+__ZN12_GLOBAL__N_111TrappedRookE
+__ZN12_GLOBAL__N_19WeakQueenE
+__ZN12_GLOBAL__N_110OtherCheckE
+__ZN12_GLOBAL__N_112CloseEnemiesE
+__ZN12_GLOBAL__N_113PawnlessFlankE
+__ZN12_GLOBAL__N_112LooseEnemiesE
+__ZN12_GLOBAL__N_119ThreatByHangingPawnE
+__ZN12_GLOBAL__N_112ThreatByRankE
+__ZN12_GLOBAL__N_17HangingE
+__ZN12_GLOBAL__N_116ThreatByPawnPushE
+__ZN12_GLOBAL__N_116HinderPassedPawnE
+__ZN12_GLOBAL__N_117TrappedBishopA1H1E
+__ZN12_GLOBAL__N_15Trace6scoresE
+__ZN12_GLOBAL__N_19KingFlankE
+__ZN12_GLOBAL__N_16PassedE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/evaluate.cpp
+_GLOBAL__sub_I_evaluate.cpp
+ChessEngine/Engine/evaluate.cpp
+__cxx_global_var_init.22
+__cxx_global_var_init.21
+__cxx_global_var_init.20
+__cxx_global_var_init.19
+__cxx_global_var_init.18
+__cxx_global_var_init.17
+__cxx_global_var_init.16
+__cxx_global_var_init.15
+__cxx_global_var_init.14
+__cxx_global_var_init.13
+__cxx_global_var_init.12
+__cxx_global_var_init.11
+__cxx_global_var_init.10
+__cxx_global_var_init.9
+__cxx_global_var_init.8
+__cxx_global_var_init.7
+__cxx_global_var_init.6
+__cxx_global_var_init.5
+__cxx_global_var_init.4
+__cxx_global_var_init.3
+__cxx_global_var_init.2
+__cxx_global_var_init.1
+__cxx_global_var_init
+king_safety<BLACK>
+ChessEngine/Engine/pawns.h
+can_castle
+ChessEngine/Engine/position.h
+king_safety<WHITE>
+__pad_and_output<char, std::__1::char_traits<char> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/locale
+width
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/ios
+sputn
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/streambuf
+~basic_string
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/string
+deallocate
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__memory/allocator_traits.h
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__memory/allocator.h
+__libcpp_deallocate
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/new
+__do_deallocate_handle_size<>
+__libcpp_operator_delete<void *>
+__get_long_pointer
+__is_long
+data
+__get_pointer
+basic_string
+__init
+assign
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__string
+__set_short_size
+__set_long_size
+__set_long_cap
+__set_long_pointer
+allocate
+__libcpp_allocate
+__libcpp_operator_new<unsigned long>
+__recommend
+__align_it<16UL>
+__put_character_sequence<char, std::__1::char_traits<char> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/ostream
+setstate
+failed
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__iterator/ostreambuf_iterator.h
+fill
+widen
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__locale
+use_facet<std::__1::ctype<char> >
+eq_int_type
+flags
+ostreambuf_iterator
+rdbuf
+operator bool
+operator<<
+operator<<<std::__1::char_traits<char> >
+operator<<<char, std::__1::char_traits<char> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/iomanip
+trace
+~basic_stringstream
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/sstream
+~basic_stringbuf
+str
+to_cp
+precision
+fixed
+setf
+unsetf
+noshowpos
+showpoint
+basic_stringstream
+basic_stringbuf
+basic_iostream
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/istream
+basic_ostream
+basic_istream
+init
+basic_ios
+side_to_move
+evaluate<false>
+operator+
+ChessEngine/Engine/types.h
+operator/=
+operator/
+operator*
+game_phase
+ChessEngine/Engine/material.h
+mg_value
+eg_value
+operator+=
+pawn_asymmetry
+operator-
+non_pawn_material
+evaluate_pieces<false, WHITE, KNIGHT>
+evaluate_pieces<false, BLACK, KNIGHT>
+evaluate_pieces<false, WHITE, BISHOP>
+evaluate_pieces<false, BLACK, BISHOP>
+evaluate_pieces<false, WHITE, ROOK>
+evaluate_king<WHITE, false>
+evaluate_king<BLACK, false>
+evaluate_threats<WHITE, false>
+evaluate_passer_pawns<BLACK, false>
+llvm.loop.mustprogress
+operator-=
+make_score
+file_of
+pawn_passed
+passed_pawn_mask
+ChessEngine/Engine/bitboard.h
+operator&
+attacks_from<ROOK>
+attacks_bb<ROOK>
+magic_index<ROOK>
+forward_bb
+empty
+distance<Square>
+relative_rank
+rank_of
+popcount
+pop_lsb
+lsb
+passed_pawns
+evaluate_passer_pawns<WHITE, false>
+evaluate_threats<BLACK, false>
+shift<SOUTH_WEST>
+shift<SOUTH_EAST>
+shift<SOUTH>
+pieces
+more_than_one
+type_of
+piece_on
+shift<SQ_B2>
+shift<SQ_H1>
+shift<SQ_A2>
+attacks_from<KNIGHT>
+attacks_from<BISHOP>
+attacks_bb<BISHOP>
+magic_index<BISHOP>
+count<QUEEN>
+pinned_pieces
+min<int>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/min.h
+min<int, std::__1::__less<int, int> >
+operator()
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/comp.h
+square<KING>
+evaluate_pieces<false, BLACK, ROOK>
+evaluate_pieces<false, WHITE, QUEEN>
+evaluate_pieces<false, BLACK, QUEEN>
+attacks_from<QUEEN>
+squares<QUEEN>
+semiopen_side
+semiopen_file
+squares<ROOK>
+pawns_on_same_color_squares
+pawn_attacks_span
+squares<BISHOP>
+squares<KNIGHT>
+pawns_score
+imbalance
+psq_score
+evaluate
+specialized_eval_exists
+evaluate_scale_factor
+make_piece
+operator~
+count<PAWN>
+opposite_bishops
+opposite_colors
+square<BISHOP>
+scale_factor
+evaluate_initiative
+max<int>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/max.h
+max<int, std::__1::__less<int, int> >
+distance<Rank, Square>
+distance<Rank>
+distance<File, Square>
+distance<File>
+evaluate_space<BLACK>
+open_files
+count<NO_PIECE_TYPE>
+evaluate_space<WHITE>
+eval_init<BLACK>
+pawn_attacks
+attacks_from<KING>
+operator|
+eval_init<WHITE>
+evaluate<true>
+add
+evaluate_pieces<true, WHITE, KNIGHT>
+evaluate_pieces<true, BLACK, KNIGHT>
+evaluate_pieces<true, WHITE, BISHOP>
+evaluate_pieces<true, BLACK, BISHOP>
+evaluate_pieces<true, WHITE, ROOK>
+evaluate_passer_pawns<BLACK, true>
+evaluate_passer_pawns<WHITE, true>
+evaluate_threats<BLACK, true>
+evaluate_threats<WHITE, true>
+evaluate_king<BLACK, true>
+evaluate_king<WHITE, true>
+evaluate_pieces<true, BLACK, ROOK>
+evaluate_pieces<true, WHITE, QUEEN>
+evaluate_pieces<true, BLACK, QUEEN>
+__ZN10ThreadPoolD1Ev
+__ZNSt3__16vectorIN6Search8RootMoveENS_9allocatorIS2_EEED1Ev
+__ZN8EndgamesD1Ev
+__ZN9HashTableIN8Material5EntryELi8192EED1Ev
+__ZN9HashTableIN5Pawns5EntryELi16384EED1Ev
+__ZNSt3__110unique_ptrINS_5dequeI9StateInfoNS_9allocatorIS2_EEEENS_14default_deleteIS5_EEE5resetEPS5_
+__ZNKSt3__113__vector_baseIN5Pawns5EntryENS_9allocatorIS2_EEE20__throw_length_errorEv
+__ZNSt3__1L20__throw_length_errorEPKc
+__ZNSt12length_errorC1EPKc
+__ZNKSt3__113__vector_baseIN8Material5EntryENS_9allocatorIS2_EEE20__throw_length_errorEv
+__ZNKSt3__113__vector_baseIP6ThreadNS_9allocatorIS2_EEE20__throw_out_of_rangeEv
+__ZNKSt3__113__vector_baseI4MoveNS_9allocatorIS1_EEE20__throw_length_errorEv
+__ZNSt3__113__vector_baseIN6Search8RootMoveENS_9allocatorIS2_EEE5clearEv
+__ZNSt3__1L14__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEM6ThreadFvvEPS7_EEEEEPvSC_
+__ZNSt3__110unique_ptrINS_15__thread_structENS_14default_deleteIS1_EEED1Ev
+__ZNKSt3__113__vector_baseIP6ThreadNS_9allocatorIS2_EEE20__throw_length_errorEv
+__ZNSt3__110unique_ptrINS_11__tree_nodeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN3UCI6OptionEEEPvEENS_22__tree_node_destructorINS6_ISD_EEEEED1Ev
+__ZNKSt3__113__vector_baseIN6Search8RootMoveENS_9allocatorIS2_EEE20__throw_length_errorEv
+__GLOBAL__sub_I_thread.cpp
+__ZNSt3__1L19piecewise_constructE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/thread.cpp
+_GLOBAL__sub_I_thread.cpp
+ChessEngine/Engine/thread.cpp
+ThreadPool
+ChessEngine/Engine/thread.h
+unique_ptr<true, void>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__memory/unique_ptr.h
+__compressed_pair<std::__1::deque<StateInfo, std::__1::allocator<StateInfo> > *, std::__1::__default_init_tag>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__memory/compressed_pair.h
+__compressed_pair_elem<std::__1::deque<StateInfo, std::__1::allocator<StateInfo> > *, void>
+vector
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/vector
+~__vector_base
+clear
+__destruct_at_end
+__construct_at_end<Move *>
+~_ConstructTransaction
+__construct_range_forward<std::__1::allocator<Move>, Move, Move, Move, Move, void>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/memory
+_ConstructTransaction
+size
+__vector_base
+__vallocate
+__end_cap
+first
+__get
+__vdeallocate
+assign<Search::RootMove *>
+__construct_at_end<Search::RootMove *>
+__construct_range_forward<std::__1::allocator<Search::RootMove>, Search::RootMove *, Search::RootMove *>
+construct<Search::RootMove, Search::RootMove &, void>
+construct<Search::RootMove, Search::RootMove &>
+RootMove
+ChessEngine/Engine/syzygy/../search.h
+capacity
+destroy<Search::RootMove, void>
+destroy
+~RootMove
+~vector
+copy<Search::RootMove *, Search::RootMove *>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/copy.h
+__copy<Search::RootMove *, Search::RootMove *>
+__copy_constexpr<Search::RootMove *, Search::RootMove *>
+operator=
+distance<Search::RootMove *>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__iterator/distance.h
+__distance<Search::RootMove *>
+~__split_buffer
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__split_buffer
+__throw_length_error
+__tree_balance_after_insert<std::__1::__tree_node_base<void *> *>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__tree
+__tree_left_rotate<std::__1::__tree_node_base<void *> *>
+__tree_is_left_child<std::__1::__tree_node_base<void *> *>
+__set_parent
+__parent_unsafe
+__tree_right_rotate<std::__1::__tree_node_base<void *> *>
+~unique_ptr
+reset
+destroy<std::__1::pair<const std::__1::string, UCI::Option>, void, void>
+~pair
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__utility/pair.h
+~Option
+ChessEngine/Engine/uci.h
+__get_ptr
+__get_value
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/map
+__insert_node_at
+__begin_node
+__construct_node<const std::__1::piecewise_construct_t &, std::__1::tuple<std::__1::string &&>, std::__1::tuple<> >
+construct<std::__1::pair<const std::__1::string, UCI::Option>, const std::__1::piecewise_construct_t &, std::__1::tuple<std::__1::string &&>, std::__1::tuple<> , void>
+construct<std::__1::pair<const std::__1::string, UCI::Option>, const std::__1::piecewise_construct_t &, std::__1::tuple<std::__1::string &&>, std::__1::tuple<> >
+pair<std::__1::string &&>
+pair<std::__1::string &&, 0UL>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/tuple
+__zero
+__compressed_pair<std::__1::__tree_node<std::__1::__value_type<std::__1::string, UCI::Option>, void *> *&, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::string, UCI::Option>, void *> > > >
+__compressed_pair_elem<std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::string, UCI::Option>, void *> > >, void>
+__compressed_pair_elem<std::__1::__tree_node<std::__1::__value_type<std::__1::string, UCI::Option>, void *> *&, void>
+__node_alloc
+__find_equal<std::__1::string>
+__root_ptr
+__root
+__end_node
+__emplace_unique_key_args<std::__1::string, const std::__1::piecewise_construct_t &, std::__1::tuple<std::__1::string &&>, std::__1::tuple<> >
+pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::string, UCI::Option>, std::__1::__tree_node<std::__1::__value_type<std::__1::string, UCI::Option>, void *> *, long>, bool &, false>
+release
+get
+__thread_proxy<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (Thread::*)(), Thread *> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/thread
+~tuple
+~__tuple_impl
+~__tuple_leaf
+get<0UL, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (Thread::*)(), Thread *>
+__thread_execute<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (Thread::*)(), Thread *, 2UL>
+__invoke<void (Thread::*)(), Thread *, void>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/type_traits
+get<2UL, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (Thread::*)(), Thread *>
+set_pointer
+__libcpp_tls_set
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__threading_support
+__construct_at_end
+construct<Move, const Move &, void>
+construct<Move, const Move &>
+assign<Move *>
+copy<Move *, Move *>
+__copy<Move, Move>
+distance<Move *>
+__distance<Move *>
+__throw_out_of_range
+destroy<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, void, void>
+destroy<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, void, void>
+construct<Material::Entry, void>
+construct<Material::Entry>
+length_error
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/stdexcept
+construct<Pawns::Entry, void>
+construct<Pawns::Entry>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/deque
+pop_front
+__destruct_at_begin
+end
+begin
+~__deque_base
+~deque
+start_thinking
+start_searching
+~unique_lock
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__mutex_base
+unique_lock
+main
+operator!=<Thread **>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__iterator/wrap_iter.h
+operator==<Thread **>
+operator++
+back
+operator->
+is_chess960
+at
+push_back
+__push_back_slow_path<Search::RootMove>
+__swap_out_circular_buffer
+swap<Search::RootMove *>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__utility/swap.h
+__construct_backward_with_exception_guarantees<std::__1::allocator<Search::RootMove>, Search::RootMove *>
+construct<Search::RootMove, Search::RootMove, void>
+construct<Search::RootMove, Search::RootMove>
+__split_buffer
+__compressed_pair<nullptr_t, std::__1::allocator<Search::RootMove> &>
+__compressed_pair_elem<std::__1::allocator<Search::RootMove> &, void>
+__construct_one_at_end<Search::RootMove>
+count<std::__1::__wrap_iter<const Move *>, ExtMove>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/count.h
+operator!=<const Move *>
+operator==<const Move *>
+MoveList
+ChessEngine/Engine/movegen.h
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/atomic
+store
+__cxx_atomic_store<bool>
+tb_hits
+operator!=<Thread *const *>
+operator==<Thread *const *>
+nodes_searched
+exit
+pop_back
+read_uci_options
+__push_back_slow_path<Thread *>
+swap<Thread **>
+__construct_backward_with_exception_guarantees<std::__1::allocator<Thread *>, Thread *, void>
+construct<Thread *, Thread *, void>
+construct<Thread *, Thread *>
+__construct_one_at_end<Thread *>
+Thread
+operator[]
+__get_np
+basic_string<nullptr_t>
+copy
+MainThread
+unlock
+wait
+wait<(lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/thread.cpp:76:29)>
+load
+__cxx_atomic_load<bool>
+wait_for_search_finished
+wait<(lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/thread.cpp:67:29)>
+~Thread
+~HashTable
+ChessEngine/Engine/misc.h
+~Endgames
+ChessEngine/Engine/endgame.h
+~map
+~__tree
+idle_loop
+wait<(lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/thread.cpp:45:29)>
+__libcpp_thread_isnull
+__libcpp_thread_get_id
+thread<void (Thread::*)(), Thread *, void>
+__libcpp_thread_create
+tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (Thread::*)(), Thread *, 0>
+__tuple_impl<0UL, 1UL, 2UL, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (Thread::*)(), Thread *, std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void (Thread::*)(), Thread *>
+__tuple_leaf<Thread *, void>
+__tuple_leaf<void (Thread::*)(), void>
+__tuple_leaf<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct> >, void>
+unique_ptr
+__compressed_pair<std::__1::__thread_struct *, std::__1::default_delete<std::__1::__thread_struct> >
+__compressed_pair_elem<std::__1::__thread_struct *, void>
+HashTable
+condition_variable
+mutex
+thread
+~ThreadPool
+__ZN6Search10LimitsTypeD1Ev
+___cxx_global_array_dtor
+__ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1IDnEEPKc
+__ZN12_GLOBAL__N_16searchILNS_8NodeTypeE1EEE5ValueR8PositionPN6Search5StackES2_S2_5Depthbb
+__ZNK14TimeManagement7elapsedEv
+__ZN12_GLOBAL__N_15Skill9pick_bestEm
+__ZNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1Ev
+__ZN10MainThreadD1Ev
+__ZN10MainThreadD0Ev
+__ZN8PositionC2ERKS_P6Thread
+__ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE20__throw_length_errorEv
+__ZN12_GLOBAL__N_110check_timeEv
+__ZN12_GLOBAL__N_16searchILNS_8NodeTypeE0EEE5ValueR8PositionPN6Search5StackES2_S2_5Depthbb
+__ZN12_GLOBAL__N_17qsearchILNS_8NodeTypeE0ELb1EEE5ValueR8PositionPN6Search5StackES2_S2_5Depth
+__ZN12_GLOBAL__N_17qsearchILNS_8NodeTypeE0ELb0EEE5ValueR8PositionPN6Search5StackES2_S2_5Depth
+__ZN12_GLOBAL__N_17qsearchILNS_8NodeTypeE1ELb1EEE5ValueR8PositionPN6Search5StackES2_S2_5Depth
+__ZN12_GLOBAL__N_17qsearchILNS_8NodeTypeE1ELb0EEE5ValueR8PositionPN6Search5StackES2_S2_5Depth
+__ZN12_GLOBAL__N_112update_statsERK8PositionPN6Search5StackE4MovePS6_i5Value
+__ZN12_GLOBAL__N_115update_cm_statsEPN6Search5StackE5Piece6Square5Value
+__ZNSt3__110unique_ptrIN6Search8RootMoveERNS_12__destruct_nEED1Ev
+__GLOBAL__sub_I_search.cpp
+__ZN12_GLOBAL__N_111HalfDensityE
+__ZN12_GLOBAL__N_110ReductionsE
+__ZN12_GLOBAL__N_118FutilityMoveCountsE
+__ZN12_GLOBAL__N_19DrawValueE
+__ZN12_GLOBAL__N_18EasyMoveE
+__ZGVZN12_GLOBAL__N_15Skill9pick_bestEmE3rng
+__ZZN12_GLOBAL__N_110check_timeEvE12lastInfoTime
+__ZGVZN12_GLOBAL__N_110check_timeEvE12lastInfoTime
+__ZN12_GLOBAL__N_112razor_marginE
+__ZZN12_GLOBAL__N_15Skill9pick_bestEmE3rng.0
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/search.cpp
+_GLOBAL__sub_I_search.cpp
+ChessEngine/Engine/search.cpp
+__construct_at_end<const int *>
+__construct_range_forward<std::__1::allocator<int>, const int, int, int, int, void>
+LimitsType
+push_front
+construct<StateInfo *, StateInfo *const &, void>
+construct<StateInfo *, StateInfo *const &>
+swap<StateInfo **>
+__construct_at_end<std::__1::move_iterator<StateInfo **> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__iterator/move_iterator.h
+construct<StateInfo *, StateInfo *, void>
+construct<StateInfo *, StateInfo *>
+distance<std::__1::move_iterator<StateInfo **> >
+__distance<std::__1::move_iterator<StateInfo **> >
+operator-<StateInfo **, StateInfo **>
+max<unsigned long>
+max<unsigned long, std::__1::__less<unsigned long, unsigned long> >
+move_backward<StateInfo **, StateInfo **>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/move_backward.h
+__move_backward<StateInfo *, StateInfo *>
+move<StateInfo **, StateInfo **>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/move.h
+__move<StateInfo *, StateInfo *>
+__add_back_capacity
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__memory/shared_ptr.h
+__compressed_pair<nullptr_t, std::__1::allocator<StateInfo *> &>
+__compressed_pair_elem<std::__1::allocator<StateInfo *> &, void>
+__compressed_pair_elem<nullptr_t, void>
+__alloc
+front
+__front_spare
+construct<StateInfo, StateInfo, void>
+construct<StateInfo, StateInfo>
+__back_spare
+__capacity
+__rotate_forward<std::__1::__wrap_iter<Search::RootMove *> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/rotate.h
+operator==<Search::RootMove *>
+swap<Search::RootMove>
+__move_assign
+__half_inplace_merge<std::__1::__invert<std::__1::__less<Search::RootMove, Search::RootMove> &>, std::__1::reverse_iterator<Search::RootMove *>, std::__1::reverse_iterator<std::__1::__wrap_iter<Search::RootMove *> >, std::__1::reverse_iterator<std::__1::__wrap_iter<Search::RootMove *> > >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h
+operator!=<Search::RootMove *, Search::RootMove *>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h
+operator()<Search::RootMove, Search::RootMove>
+operator<
+operator--
+move<std::__1::reverse_iterator<Search::RootMove *>, std::__1::reverse_iterator<std::__1::__wrap_iter<Search::RootMove *> > >
+__move<std::__1::reverse_iterator<Search::RootMove *>, std::__1::reverse_iterator<std::__1::__wrap_iter<Search::RootMove *> > >
+__move_constexpr<std::__1::reverse_iterator<Search::RootMove *>, std::__1::reverse_iterator<std::__1::__wrap_iter<Search::RootMove *> > >
+operator==<std::__1::__wrap_iter<Search::RootMove *>, std::__1::__wrap_iter<Search::RootMove *> >
+__half_inplace_merge<std::__1::__less<Search::RootMove, Search::RootMove> &, Search::RootMove *, std::__1::__wrap_iter<Search::RootMove *>, std::__1::__wrap_iter<Search::RootMove *> >
+move<Search::RootMove *, std::__1::__wrap_iter<Search::RootMove *> >
+__move<Search::RootMove *, Search::RootMove *>
+__move_constexpr<Search::RootMove *, Search::RootMove *>
+__buffered_inplace_merge<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *> >
+operator!=<Search::RootMove *>
+__incr<Search::RootMove>
+__incr
+__compressed_pair<Search::RootMove *&, std::__1::__destruct_n &>
+__compressed_pair_elem<std::__1::__destruct_n &, void>
+__compressed_pair_elem<Search::RootMove *&, void>
+__destruct_n
+__merge_move_construct<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *>, std::__1::__wrap_iter<Search::RootMove *> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/stable_sort.h
+__insertion_sort_move<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/sort.h
+__inplace_merge<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *> >
+rotate<std::__1::__wrap_iter<Search::RootMove *> >
+__rotate<std::__1::__wrap_iter<Search::RootMove *> >
+distance<std::__1::__wrap_iter<Search::RootMove *> >
+__distance<std::__1::__wrap_iter<Search::RootMove *> >
+operator-<Search::RootMove *, Search::RootMove *>
+__lower_bound<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *>, Search::RootMove>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/lower_bound.h
+advance<std::__1::__wrap_iter<Search::RootMove *>, long, long, void>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__iterator/advance.h
+__advance<std::__1::__wrap_iter<Search::RootMove *> >
+__half_positive<long>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/half_positive.h
+__upper_bound<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *>, Search::RootMove>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/upper_bound.h
+operator()<Search::RootMove>
+__process<Search::RootMove>
+second
+__merge_move_assign<std::__1::__less<Search::RootMove, Search::RootMove> &, Search::RootMove *, Search::RootMove *, std::__1::__wrap_iter<Search::RootMove *> >
+__stable_sort_move<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *> >
+__insertion_sort<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *> >
+__stable_sort<std::__1::__less<Search::RootMove, Search::RootMove> &, std::__1::__wrap_iter<Search::RootMove *> >
+__set<Search::RootMove>
+__set
+get_temporary_buffer<Search::RootMove>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__memory/temporary_buffer.h
+__append
+swap<Move *>
+__construct_backward_with_exception_guarantees<std::__1::allocator<Move>, Move, void>
+construct<Move, void>
+construct<Move>
+update_cm_stats
+update
+ChessEngine/Engine/movepick.h
+update_stats
+moved_piece
+to_sq
+this_thread
+resize
+qsearch<(anonymous namespace)::PV, false>
+save
+ChessEngine/Engine/tt.h
+generation
+value_to_tt
+update_pv
+first_entry
+advanced_pawn_push
+from_sq
+check_squares
+discovered_check_candidates
+key
+bound
+eval
+value_from_tt
+value
+move
+qsearch<(anonymous namespace)::PV, true>
+mated_in
+capture
+qsearch<(anonymous namespace)::NonPV, false>
+max<Value>
+max<Value, std::__1::__less<Value, Value> >
+depth
+qsearch<(anonymous namespace)::NonPV, true>
+search<(anonymous namespace)::NonPV>
+stat_bonus
+is_ok
+captured_piece
+capture_or_promotion
+max<Depth>
+max<Depth, std::__1::__less<Depth, Depth> >
+make_move
+reduction<false>
+do_move
+futility_margin
+rule50_count
+min<Value>
+min<Value, std::__1::__less<Value, Value> >
+mate_in
+min<long long>
+min<long long, std::__1::__less<long long, long long> >
+checkers
+check_time
+maximum
+ChessEngine/Engine/timeman.h
+use_time_management
+now
+duration_cast<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000> >, long long, std::__1::ratio<1, 1000000000> >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/chrono
+Position
+~MainThread
+filter_root_moves
+ios_pv
+~stack
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/stack
+operator!=<Move *>
+operator==<Move *>
+top
+push
+operator<<<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+length
+stack
+deque
+__deque_base
+pick_best
+rand<unsigned int>
+rand64
+PRNG
+elapsed
+search<(anonymous namespace)::PV>
+__push_back_slow_path<const Move &>
+__construct_one_at_end<const Move &>
+find<std::__1::__wrap_iter<Search::RootMove *>, Move>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/find.h
+operator==
+reduction<true>
+endl<char, std::__1::char_traits<char> >
+count<std::__1::__wrap_iter<Search::RootMove *>, Move>
+extract_ponder_from_tt
+contains
+operator Move
+pv
+in_avail
+min<unsigned long>
+min<unsigned long, std::__1::__less<unsigned long, unsigned long> >
+search
+best_move
+enabled
+copy<std::__1::__wrap_iter<const Move *>, Move *>
+__copy<const Move, Move>
+equal<std::__1::__wrap_iter<const Move *>, Move *>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/equal.h
+equal<std::__1::__wrap_iter<const Move *>, Move *, std::__1::__equal_to<Move, Move> >
+optimum
+time_to_pick
+stable_sort<std::__1::__wrap_iter<Search::RootMove *> >
+stable_sort<std::__1::__wrap_iter<Search::RootMove *>, std::__1::__less<Search::RootMove, Search::RootMove> >
+return_temporary_buffer<Search::RootMove>
+__libcpp_deallocate_unsized
+__make_iter
+game_ply
+Skill
+new_search
+__get_short_pointer
+perft<false>
+perft<true>
+log<int>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/math.h
+llvm.loop.isvectorized
+__cxx_global_array_dtor
+~LimitsType
+__ZNSt3__110unique_ptrINS_5dequeI9StateInfoNS_9allocatorIS2_EEEENS_14default_deleteIS5_EEED1Ev
+__ZNSt3__119basic_istringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKNS_12basic_stringIcS2_S4_EEj
+__GLOBAL__sub_I_uci.cpp
+__ZN12_GLOBAL__N_16StatesE
+__ZZ15execute_commandRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3pos
+__ZGVZ15execute_commandRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEE3pos
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/uci.cpp
+_GLOBAL__sub_I_uci.cpp
+ChessEngine/Engine/uci.cpp
+__compressed_pair<std::__1::deque<StateInfo, std::__1::allocator<StateInfo> > *&, std::__1::__default_init_tag>
+__compressed_pair_elem<std::__1::deque<StateInfo, std::__1::allocator<StateInfo> > *&, void>
+getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+exceptions
+__setstate_nothrow
+eq
+to_char_type
+sbumpc
+to_int_type
+__recommend_blocks
+operator!=
+construct<StateInfo, void>
+construct<StateInfo>
+__construct_node<const std::__1::piecewise_construct_t &, std::__1::tuple<const std::__1::string &>, std::__1::tuple<> >
+construct<std::__1::pair<const std::__1::string, UCI::Option>, const std::__1::piecewise_construct_t &, std::__1::tuple<const std::__1::string &>, std::__1::tuple<> , void>
+construct<std::__1::pair<const std::__1::string, UCI::Option>, const std::__1::piecewise_construct_t &, std::__1::tuple<const std::__1::string &>, std::__1::tuple<> >
+pair<const std::__1::string &>
+pair<const std::__1::string &, 0UL>
+__emplace_unique_key_args<std::__1::string, const std::__1::piecewise_construct_t &, std::__1::tuple<const std::__1::string &>, std::__1::tuple<> >
+__count_unique<std::__1::string>
+to_move
+operator==<std::__1::allocator<char> >
+compare
+tolower
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/_ctype.h
+__get_long_size
+promotion_type
+operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+append
+square
+__init<const char *>
+loop
+~basic_istringstream
+operator!=<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+operator==<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+operator>>
+skipws
+operator!
+fail
+operator>><char, std::__1::char_traits<char>, std::__1::allocator<char> >
+is
+sgetc
+basic_istringstream
+execute_command
+setoption
+count
+position
+go
+__push_back_slow_path<Move>
+construct<Move, Move, void>
+construct<Move, Move>
+__construct_one_at_end<Move>
+__ZN7EndgameIL11EndgameType3E5ValueED1Ev
+__ZN7EndgameIL11EndgameType3E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType3E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType0E5ValueED1Ev
+__ZN7EndgameIL11EndgameType0E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType0E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType2E5ValueED1Ev
+__ZN7EndgameIL11EndgameType2E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType2E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType4E5ValueED1Ev
+__ZN7EndgameIL11EndgameType4E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType4E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType5E5ValueED1Ev
+__ZN7EndgameIL11EndgameType5E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType5E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType6E5ValueED1Ev
+__ZN7EndgameIL11EndgameType6E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType6E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType7E5ValueED1Ev
+__ZN7EndgameIL11EndgameType7E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType7E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType8E5ValueED1Ev
+__ZN7EndgameIL11EndgameType8E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType8E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType19E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType19E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType19E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType20E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType20E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType20E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType12E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType12E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType12E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType13E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType13E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType13E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType16E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType16E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType16E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType18E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType18E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType18E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType17E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType17E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType17E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType14E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType14E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType14E11ScaleFactorE11strong_sideEv
+__ZN12_GLOBAL__N_111PushToEdgesE
+__ZN12_GLOBAL__N_19PushCloseE
+__ZN12_GLOBAL__N_113PushToCornersE
+__ZN12_GLOBAL__N_18PushAwayE
+__ZN12_GLOBAL__N_119KRPPKRPScaleFactorsE
+__ZTS7EndgameIL11EndgameType3E5ValueE
+__ZTS11EndgameBaseI5ValueE
+__ZTI11EndgameBaseI5ValueE
+__ZTI7EndgameIL11EndgameType3E5ValueE
+__ZTS7EndgameIL11EndgameType0E5ValueE
+__ZTI7EndgameIL11EndgameType0E5ValueE
+__ZTS7EndgameIL11EndgameType2E5ValueE
+__ZTI7EndgameIL11EndgameType2E5ValueE
+__ZTS7EndgameIL11EndgameType4E5ValueE
+__ZTI7EndgameIL11EndgameType4E5ValueE
+__ZTS7EndgameIL11EndgameType5E5ValueE
+__ZTI7EndgameIL11EndgameType5E5ValueE
+__ZTS7EndgameIL11EndgameType6E5ValueE
+__ZTI7EndgameIL11EndgameType6E5ValueE
+__ZTS7EndgameIL11EndgameType7E5ValueE
+__ZTI7EndgameIL11EndgameType7E5ValueE
+__ZTS7EndgameIL11EndgameType8E5ValueE
+__ZTI7EndgameIL11EndgameType8E5ValueE
+__ZTS7EndgameIL11EndgameType19E11ScaleFactorE
+__ZTS11EndgameBaseI11ScaleFactorE
+__ZTI11EndgameBaseI11ScaleFactorE
+__ZTI7EndgameIL11EndgameType19E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType20E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType20E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType12E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType12E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType13E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType13E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType16E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType16E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType18E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType18E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType17E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType17E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType14E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType14E11ScaleFactorE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/endgame.cpp
+strong_side
+~Endgame
+__emplace_unique_key_args<unsigned long long, const std::__1::piecewise_construct_t &, std::__1::tuple<unsigned long long &&>, std::__1::tuple<> >
+pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, std::__1::__tree_node<std::__1::__value_type<unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, void *> *, long>, bool &, false>
+__construct_node<const std::__1::piecewise_construct_t &, std::__1::tuple<unsigned long long &&>, std::__1::tuple<> >
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<unsigned long long &&>, std::__1::tuple<> , void>
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<unsigned long long &&>, std::__1::tuple<> >
+pair<unsigned long long &&>
+pair<unsigned long long &&, 0UL>
+__compressed_pair<EndgameBase<ScaleFactor> *, std::__1::__default_init_tag>
+__compressed_pair_elem<EndgameBase<ScaleFactor> *, void>
+__find_equal<unsigned long long>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__functional/operations.h
+pair<std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, std::__1::__tree_node<std::__1::__value_type<unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, void *> *, long>, bool &, false>
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<unsigned long long &&>, std::__1::tuple<> , void>
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<unsigned long long &&>, std::__1::tuple<> >
+__compressed_pair<EndgameBase<Value> *, std::__1::__default_init_tag>
+__compressed_pair_elem<EndgameBase<Value> *, void>
+ChessEngine/Engine/endgame.cpp
+normalize
+square<PAWN>
+make_square
+squares<PAWN>
+in_front_bb
+max<Rank>
+max<Rank, std::__1::__less<Rank, Rank> >
+pawn_push
+square<ROOK>
+attacks_from<PAWN>
+backmost_sq
+file_bb
+relative_square
+square<KNIGHT>
+count<KNIGHT>
+count<BISHOP>
+count<ROOK>
+Endgames
+add<KRPPKRP, ScaleFactor>
+material_key
+Endgame
+add<KBPPKB, ScaleFactor>
+add<KBPKN, ScaleFactor>
+add<KBPKB, ScaleFactor>
+add<KRPKB, ScaleFactor>
+add<KRPKR, ScaleFactor>
+add<KNPKB, ScaleFactor>
+add<KNPK, ScaleFactor>
+add<KQKR, Value>
+add<KQKP, Value>
+add<KRKN, Value>
+add<KRKB, Value>
+add<KRKP, Value>
+add<KBNK, Value>
+add<KNNK, Value>
+add<KPK, Value>
+pair<true, false>
+map
+__tree
+__compressed_pair<int, const std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, std::__1::less<unsigned long long>, true> &>
+__compressed_pair_elem<int, void>
+__compressed_pair<true, void>
+__compressed_pair_elem
+__tree_end_node
+__compressed_pair<int, const std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, std::__1::less<unsigned long long>, true> &>
+__ZN12_GLOBAL__N_16Logger5startERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+__ZN12_GLOBAL__N_16LoggerD1Ev
+__ZN12_GLOBAL__N_13TieD1Ev
+__ZNSt3__114basic_ofstreamIcNS_11char_traitsIcEEED1Ev
+__ZN12_GLOBAL__N_13TieD0Ev
+__ZN12_GLOBAL__N_13Tie4syncEv
+__ZN12_GLOBAL__N_13Tie9underflowEv
+__ZN12_GLOBAL__N_13Tie5uflowEv
+__ZN12_GLOBAL__N_13Tie8overflowEi
+__ZN12_GLOBAL__N_13Tie3logEiPKc
+__GLOBAL__sub_I_misc.cpp
+__ZN12_GLOBAL__N_16Logger5startERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE.cold.1
+__ZN12_GLOBAL__N_17VersionE
+__ZZlsRNSt3__113basic_ostreamIcNS_11char_traitsIcEEEE8SyncCoutE1m
+__ZGVZlsRNSt3__113basic_ostreamIcNS_11char_traitsIcEEEE8SyncCoutE1m
+__ZZN12_GLOBAL__N_16Logger5startERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEE1l
+__ZGVZN12_GLOBAL__N_16Logger5startERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEE1l
+__ZTVN12_GLOBAL__N_13TieE
+__ZTSN12_GLOBAL__N_13TieE
+__ZTIN12_GLOBAL__N_13TieE
+__ZZN12_GLOBAL__N_13Tie3logEiPKcE4last
+__ZL4hits.0
+__ZL4hits.1
+__ZL5means.0
+__ZL5means.1
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/misc.cpp
+_ZN12_GLOBAL__N_16Logger5startERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE.cold.1
+ChessEngine/Engine/misc.cpp
+_GLOBAL__sub_I_misc.cpp
+sputc
+overflow
+uflow
+underflow
+sync
+pubsync
+~Tie
+~basic_ofstream
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/fstream
+~Logger
+bindThisThread
+prefetch
+start
+close
+Logger
+Tie
+basic_ofstream
+start_logger
+dbg_print
+dbg_mean_of
+dbg_hit_on
+engine_info
+substr
+find
+__str_find<char, unsigned long, std::__1::char_traits<char>, 18446744073709551615UL>
+__search_substring<char, std::__1::char_traits<char> >
+__Z10attacks_bb5Piece6Squarey
+__ZN12_GLOBAL__N_114generate_movesIL9PieceType3ELb0EEEP7ExtMoveRK8PositionS3_5Colory
+__ZN12_GLOBAL__N_114generate_movesIL9PieceType4ELb0EEEP7ExtMoveRK8PositionS3_5Colory
+__ZN12_GLOBAL__N_114generate_movesIL9PieceType5ELb0EEEP7ExtMoveRK8PositionS3_5Colory
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight1ELb0ELb1EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight2ELb0ELb1EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight1ELb0ELb0EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight2ELb0ELb0EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight4ELb0ELb1EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight8ELb0ELb1EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight4ELb0ELb0EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_117generate_castlingIL13CastlingRight8ELb0ELb0EEEP7ExtMoveRK8PositionS3_5Color
+__ZN12_GLOBAL__N_114generate_movesIL9PieceType2ELb1EEEP7ExtMoveRK8PositionS3_5Colory
+__ZN12_GLOBAL__N_114generate_movesIL9PieceType3ELb1EEEP7ExtMoveRK8PositionS3_5Colory
+__ZN12_GLOBAL__N_114generate_movesIL9PieceType4ELb1EEEP7ExtMoveRK8PositionS3_5Colory
+__ZN12_GLOBAL__N_114generate_movesIL9PieceType5ELb1EEEP7ExtMoveRK8PositionS3_5Colory
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/movegen.cpp
+generate_moves<QUEEN, true>
+ChessEngine/Engine/movegen.cpp
+generate_moves<ROOK, true>
+generate_moves<BISHOP, true>
+generate_moves<KNIGHT, true>
+generate_castling<BLACK_OOO, false, false>
+make<CASTLING>
+attackers_to
+castling_rook_square
+castling_impeded
+generate_castling<BLACK_OO, false, false>
+generate_castling<BLACK_OOO, false, true>
+operator^
+generate_castling<BLACK_OO, false, true>
+generate_castling<WHITE_OOO, false, false>
+generate_castling<WHITE_OO, false, false>
+generate_castling<WHITE_OOO, false, true>
+generate_castling<WHITE_OO, false, true>
+generate_moves<QUEEN, false>
+generate_moves<ROOK, false>
+generate_moves<BISHOP, false>
+attacks_bb
+generate<LEGAL>
+generate<EVASIONS>
+generate_all<BLACK, EVASIONS>
+generate_moves<KNIGHT, false>
+generate_pawn_moves<BLACK, EVASIONS>
+make<ENPASSANT>
+ep_square
+make_promotions<EVASIONS, SOUTH>
+make<PROMOTION>
+make_promotions<EVASIONS, SOUTH_EAST>
+make_promotions<EVASIONS, SOUTH_WEST>
+generate_all<WHITE, EVASIONS>
+generate_pawn_moves<WHITE, EVASIONS>
+make_promotions<EVASIONS, SQ_A2>
+make_promotions<EVASIONS, SQ_H1>
+make_promotions<EVASIONS, SQ_B2>
+between_bb
+generate<QUIET_CHECKS>
+generate_all<BLACK, QUIET_CHECKS>
+generate_castling<BLACK_OOO, true, false>
+generate_castling<BLACK_OO, true, false>
+generate_castling<BLACK_OOO, true, true>
+generate_castling<BLACK_OO, true, true>
+generate_pawn_moves<BLACK, QUIET_CHECKS>
+make_promotions<QUIET_CHECKS, SOUTH>
+make_promotions<QUIET_CHECKS, SOUTH_EAST>
+make_promotions<QUIET_CHECKS, SOUTH_WEST>
+generate_all<WHITE, QUIET_CHECKS>
+generate_castling<WHITE_OOO, true, false>
+generate_castling<WHITE_OO, true, false>
+generate_castling<WHITE_OOO, true, true>
+generate_castling<WHITE_OO, true, true>
+generate_pawn_moves<WHITE, QUIET_CHECKS>
+make_promotions<QUIET_CHECKS, SQ_A2>
+make_promotions<QUIET_CHECKS, SQ_H1>
+make_promotions<QUIET_CHECKS, SQ_B2>
+attacks_from
+generate<NON_EVASIONS>
+generate_all<BLACK, NON_EVASIONS>
+generate_pawn_moves<BLACK, NON_EVASIONS>
+make_promotions<NON_EVASIONS, SOUTH>
+make_promotions<NON_EVASIONS, SOUTH_EAST>
+make_promotions<NON_EVASIONS, SOUTH_WEST>
+generate_all<WHITE, NON_EVASIONS>
+generate_pawn_moves<WHITE, NON_EVASIONS>
+make_promotions<NON_EVASIONS, SQ_A2>
+make_promotions<NON_EVASIONS, SQ_H1>
+make_promotions<NON_EVASIONS, SQ_B2>
+generate<QUIETS>
+generate_all<BLACK, QUIETS>
+generate_pawn_moves<BLACK, QUIETS>
+make_promotions<QUIETS, SOUTH>
+make_promotions<QUIETS, SOUTH_EAST>
+make_promotions<QUIETS, SOUTH_WEST>
+generate_all<WHITE, QUIETS>
+generate_pawn_moves<WHITE, QUIETS>
+make_promotions<QUIETS, SQ_A2>
+make_promotions<QUIETS, SQ_H1>
+make_promotions<QUIETS, SQ_B2>
+generate<CAPTURES>
+generate_all<BLACK, CAPTURES>
+generate_pawn_moves<BLACK, CAPTURES>
+make_promotions<CAPTURES, SOUTH>
+make_promotions<CAPTURES, SOUTH_EAST>
+make_promotions<CAPTURES, SOUTH_WEST>
+generate_all<WHITE, CAPTURES>
+generate_pawn_moves<WHITE, CAPTURES>
+make_promotions<CAPTURES, SQ_A2>
+make_promotions<CAPTURES, SQ_H1>
+make_promotions<CAPTURES, SQ_B2>
+__ZNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKNS_12basic_stringIcS2_S4_EEj
+__GLOBAL__sub_I_position.cpp
+__ZN12_GLOBAL__N_111PieceToCharE
+__ZL6Pieces
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/position.cpp
+_GLOBAL__sub_I_position.cpp
+ChessEngine/Engine/position.cpp
+operator>><char, std::__1::char_traits<char> >
+pos_is_ok
+flip
+transform<std::__1::__wrap_iter<char *>, std::__1::__wrap_iter<char *>, (lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/position.cpp:1132:20)>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/transform.h
+operator!=<char *>
+operator==<char *>
+toupper
+islower
+__istype
+insert
+is_draw
+see_ge
+min_attacker<1>
+min_attacker<2>
+min_attacker<3>
+min_attacker<4>
+min_attacker<5>
+color_of
+key_after
+undo_null_move
+do_null_move
+do_castling<false>
+put_piece
+operator|=
+remove_piece
+operator^=
+undo_move
+move_piece
+do_castling<true>
+gives_check
+aligned
+pseudo_legal
+legal
+set
+transform<std::__1::__wrap_iter<char *>, std::__1::__wrap_iter<char *>, int (*)(int)>
+__get_short_size
+slider_blockers
+set_check_info
+set_state
+set_castling_right
+min<Square>
+min<Square, std::__1::__less<Square, Square> >
+rand<unsigned long long>
+operator>><std::__1::char_traits<char> >
+isspace
+__isctype
+noskipws
+fill_n<Square *, unsigned long, Square>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/fill_n.h
+__fill_n<Square *, unsigned long, Square>
+fen
+~basic_ostringstream
+basic_ostringstream
+ChessEngine/Engine/syzygy/tbprobe.h
+dec
+uppercase
+hex
+__ZNSt3__13mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN3UCI6OptionENS7_19CaseInsensitiveLessENS4_INS_4pairIKS6_S8_EEEEED1Ev
+__GLOBAL__sub_I_ucioption.cpp
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.1
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.2
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.3
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.4
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.5
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.6
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.7
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.8
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.9
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.10
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.11
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.12
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.13
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.14
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.15
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.16
+__ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.17
+__ZN3UCI6OptionC2EPFvRKS0_E.cold.1
+__ZZN3UCI6OptionlsERKS0_E12insert_order
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/ucioption.cpp
+_ZN3UCI6OptionC2EPFvRKS0_E.cold.1
+ChessEngine/Engine/ucioption.cpp
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.17
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.16
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.15
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.14
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.13
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.12
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.11
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.10
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.9
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.8
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.7
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.6
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.5
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.4
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.3
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.2
+_ZN3UCI4initERNSt3__13mapINS0_12basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEENS_6OptionENS_19CaseInsensitiveLessENS5_INS0_4pairIKS7_S8_EEEEEE.cold.1
+_GLOBAL__sub_I_ucioption.cpp
+__compressed_pair<int, const std::__1::__map_value_compare<std::__1::string, std::__1::__value_type<std::__1::string, UCI::Option>, UCI::CaseInsensitiveLess, true> &>
+Option
+__tree_next_iter<std::__1::__tree_end_node<std::__1::__tree_node_base<void *> *> *, std::__1::__tree_node_base<void *> *>
+__tree_min<std::__1::__tree_node_base<void *> *>
+count_cores
+lexicographical_compare<std::__1::__wrap_iter<const char *>, std::__1::__wrap_iter<const char *>, (lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/ucioption.cpp:50:45)>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/lexicographical_compare.h
+__lexicographical_compare<(lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/ucioption.cpp:50:45) &, std::__1::__wrap_iter<const char *>, std::__1::__wrap_iter<const char *> >
+operator!=<const char *>
+operator==<const char *>
+on_tb_path
+operator basic_string
+on_threads
+on_logger
+operator int
+on_hash_size
+on_clear_hash
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/timeman.cpp
+ChessEngine/Engine/timeman.cpp
+remaining<(anonymous namespace)::MaxTime>
+min<double>
+min<double, std::__1::__less<double, double> >
+move_importance
+remaining<(anonymous namespace)::OptimumTime>
+__ZN12_GLOBAL__N_111init_magicsEPyPS0_S0_S0_PjP6SquarePFjS3_yE
+__Z11magic_indexIL9PieceType4EEj6Squarey
+__Z11magic_indexIL9PieceType3EEj6Squarey
+__ZN4PRNG11sparse_randIyEET_v
+__ZN12_GLOBAL__N_111init_magicsEPyPS0_S0_S0_PjP6SquarePFjS3_yE.cold.1
+__ZN12_GLOBAL__N_18MSBTableE
+__ZN12_GLOBAL__N_19RookTableE
+__ZN12_GLOBAL__N_111BishopTableE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/bitboard.cpp
+_ZN12_GLOBAL__N_111init_magicsEPyPS0_S0_S0_PjP6SquarePFjS3_yE.cold.1
+ChessEngine/Engine/bitboard.cpp
+sparse_rand<unsigned long long>
+init_magics
+sliding_attack
+rank_bb
+popcount16
+pretty
+-[EngineManager init]
+-[EngineManager dealloc]
+-[EngineManager setNumberOfPrincipalVariations:]
+-[EngineManager setGameFen:]
+-[EngineManager isAnalyzing]
+-[EngineManager startEngine]
+-[EngineManager shutdownEngine]
+-[EngineManager startAnalyzing]
+-[EngineManager stopAnalyzing]
+-[EngineManager engineController:didUpdateSearchingStatus:]
+-[EngineManager engineController:didReceivePrincipalVariation:]
+-[EngineManager engineController:didReceiveBestMove:ponderMove:]
+-[EngineManager engineController:didAnalyzeCurrentMove:number:depth:]
+-[EngineManager delegate]
+-[EngineManager setDelegate:]
+-[EngineManager gameFen]
+-[EngineManager numberOfPrincipalVariations]
+-[EngineManager engineController]
+-[EngineManager setEngineController:]
+-[EngineManager .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_SELECTOR_REFERENCES_.28
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_EngineControllerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_EngineControllerDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_EngineControllerDelegate
+__OBJC_PROTOCOL_$_EngineControllerDelegate
+__OBJC_LABEL_PROTOCOL_$_EngineControllerDelegate
+__OBJC_CLASS_PROTOCOLS_$_EngineManager
+__OBJC_METACLASS_RO_$_EngineManager
+__OBJC_$_INSTANCE_METHODS_EngineManager
+_OBJC_IVAR_$_EngineManager._delegate
+_OBJC_IVAR_$_EngineManager._gameFen
+_OBJC_IVAR_$_EngineManager._numberOfPrincipalVariations
+_OBJC_IVAR_$_EngineManager._engineController
+__OBJC_$_INSTANCE_VARIABLES_EngineManager
+__OBJC_$_PROP_LIST_EngineManager
+__OBJC_CLASS_RO_$_EngineManager
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/EngineManager.m
+ChessEngine/EngineManager.m
+ChessEngine/EngineManager.h
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/notation.cpp
+move_to_san
+ChessEngine/Engine/notation.cpp
+to_char
+move_from_uci
+move_to_uci
+score_to_uci
+__ZN12_GLOBAL__N_19HashTableD1Ev
+__ZN12_GLOBAL__N_19HashTable6insertERKNSt3__16vectorI9PieceTypeNS1_9allocatorIS3_EEEE
+__ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsEPFRS3_S4_E
+__ZN12_GLOBAL__N_16searchILb0EEEN10Tablebases8WDLScoreER8PositionPNS1_10ProbeStateE
+__ZN12_GLOBAL__N_16searchILb1EEEN10Tablebases8WDLScoreER8PositionPNS1_10ProbeStateE
+__ZNSt3__114__split_bufferIPN12_GLOBAL__N_18WDLEntryENS_9allocatorIS3_EEED1Ev
+__ZNSt3__114__split_bufferIPN12_GLOBAL__N_18DTZEntryENS_9allocatorIS3_EEED1Ev
+__ZNSt3__112__deque_baseIN12_GLOBAL__N_18DTZEntryENS_9allocatorIS2_EEE5clearEv
+__ZN12_GLOBAL__N_18DTZEntryD1Ev
+__ZNSt3__112__deque_baseIN12_GLOBAL__N_18WDLEntryENS_9allocatorIS2_EEE5clearEv
+__ZN12_GLOBAL__N_18WDLEntryD1Ev
+__ZN12_GLOBAL__N_16TBFileC1ERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE
+__ZN12_GLOBAL__N_19HashTable6insertEyPNS_8WDLEntryEPNS_8DTZEntryE
+__ZN12_GLOBAL__N_16TBFileD1Ev
+__ZNSt3__114basic_ifstreamIcNS_11char_traitsIcEEED1Ev
+__ZNSt3__114basic_ifstreamIcNS_11char_traitsIcEEED0Ev
+__ZTv0_n24_NSt3__114basic_ifstreamIcNS_11char_traitsIcEEED1Ev
+__ZTv0_n24_NSt3__114basic_ifstreamIcNS_11char_traitsIcEEED0Ev
+__ZN12_GLOBAL__N_16TBFileD0Ev
+__ZTv0_n24_N12_GLOBAL__N_16TBFileD1Ev
+__ZTv0_n24_N12_GLOBAL__N_16TBFileD0Ev
+__ZNKSt3__113__vector_baseI6SquareNS_9allocatorIS1_EEE20__throw_length_errorEv
+__ZNKSt3__113__vector_baseINS_4pairIi6SquareEENS_9allocatorIS3_EEE20__throw_length_errorEv
+__ZN12_GLOBAL__N_111probe_tableINS_8WDLEntryEN10Tablebases8WDLScoreEEET0_RK8PositionPNS2_10ProbeStateES3_
+__ZN12_GLOBAL__N_16TBFile3mapEPPvPyPKh
+__ZN12_GLOBAL__N_110set_groupsINS_8WDLEntryEEEvRT_PNS_9PairsDataEPi4File
+__ZN12_GLOBAL__N_19set_sizesEPNS_9PairsDataEPh
+__ZN12_GLOBAL__N_110set_symlenEPNS_9PairsDataEtRNSt3__16vectorIbNS2_9allocatorIbEEEE
+__ZNKSt3__113__vector_baseIyNS_9allocatorIyEEE20__throw_length_errorEv
+__ZNKSt3__113__vector_baseIhNS_9allocatorIhEEE20__throw_length_errorEv
+__ZN12_GLOBAL__N_110pawns_compE6SquareS0_
+__ZN12_GLOBAL__N_116decompress_pairsEPNS_9PairsDataEy
+__ZNSt3__17__sort5IRPFb6SquareS1_EPS1_EEjT0_S6_S6_S6_S6_T_
+__ZNSt3__17__sort5IRNS_6__lessI6SquareS2_EEPS2_EEjT0_S6_S6_S6_S6_T_
+__ZN12_GLOBAL__N_110set_groupsINS_8DTZEntryEEEvRT_PNS_9PairsDataEPi4File
+__GLOBAL__sub_I_tbprobe.cpp
+__ZN10Tablebases9probe_dtzER8PositionPNS_10ProbeStateE.cold.1
+__ZN12_GLOBAL__N_111probe_tableINS_8WDLEntryEN10Tablebases8WDLScoreEEET0_RK8PositionPNS2_10ProbeStateES3_.cold.1
+__ZN12_GLOBAL__N_112WDL_to_valueE
+__ZN12_GLOBAL__N_110EntryTableE
+__ZN12_GLOBAL__N_16TBFile5PathsE
+__ZN12_GLOBAL__N_19MapB1H1H7E
+__ZN12_GLOBAL__N_19MapA1D1D4E
+__ZN12_GLOBAL__N_15MapKKE
+__ZN12_GLOBAL__N_18BinomialE
+__ZN12_GLOBAL__N_18MapPawnsE
+__ZN12_GLOBAL__N_111LeadPawnIdxE
+__ZN12_GLOBAL__N_113LeadPawnsSizeE
+__ZTVN12_GLOBAL__N_16TBFileE
+__ZTTN12_GLOBAL__N_16TBFileE
+__ZTCN12_GLOBAL__N_16TBFileE0_NSt3__114basic_ifstreamIcNS0_11char_traitsIcEEEE
+__ZTCN12_GLOBAL__N_16TBFileE0_NSt3__113basic_istreamIcNS0_11char_traitsIcEEEE
+__ZTSN12_GLOBAL__N_16TBFileE
+__ZTIN12_GLOBAL__N_16TBFileE
+__ZZN12_GLOBAL__N_14initINS_8WDLEntryEEEPvRT_RK8PositionE5mutex
+__ZGVZN12_GLOBAL__N_14initINS_8WDLEntryEEEPvRT_RK8PositionE5mutex
+__ZZN12_GLOBAL__N_14initINS_8DTZEntryEEEPvRT_RK8PositionE5mutex
+__ZGVZN12_GLOBAL__N_14initINS_8DTZEntryEEEPvRT_RK8PositionE5mutex
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/syzygy/tbprobe.cpp
+_ZN12_GLOBAL__N_111probe_tableINS_8WDLEntryEN10Tablebases8WDLScoreEEET0_RK8PositionPNS2_10ProbeStateES3_.cold.1
+ChessEngine/Engine/syzygy/tbprobe.cpp
+_ZN10Tablebases9probe_dtzER8PositionPNS_10ProbeStateE.cold.1
+_GLOBAL__sub_I_tbprobe.cpp
+construct<Search::RootMove, const Search::RootMove &, void>
+construct<Search::RootMove, const Search::RootMove &>
+set_groups<(anonymous namespace)::DTZEntry>
+__insertion_sort_incomplete<std::__1::__less<Square, Square> &, Square *>
+swap<Square>
+__insertion_sort_3<std::__1::__less<Square, Square> &, Square *>
+__sort5<std::__1::__less<Square, Square> &, Square *>
+__sort4<std::__1::__less<Square, Square> &, Square *>
+__sort3<std::__1::__less<Square, Square> &, Square *>
+__sort<std::__1::__less<Square, Square> &, Square *>
+__insertion_sort_incomplete<bool (*&)(Square, Square), Square *>
+__insertion_sort_3<bool (*&)(Square, Square), Square *>
+__sort5<bool (*&)(Square, Square), Square *>
+__sort4<bool (*&)(Square, Square), Square *>
+__sort3<bool (*&)(Square, Square), Square *>
+__sort<bool (*&)(Square, Square), Square *>
+decompress_pairs
+get<(anonymous namespace)::LR::Value>
+get<(anonymous namespace)::LR::Right>
+get<(anonymous namespace)::LR::Left>
+number<unsigned int, 0>
+number<unsigned short, 1>
+number<unsigned long long, 0>
+swap_byte<unsigned long long, 4, 7>
+number<unsigned int, 1>
+pawns_comp
+__fill_n_false<std::__1::vector<bool, std::__1::allocator<bool> > >
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__bit_reference
+__cap
+__external_cap_to_internal
+fill_n<std::__1::vector<bool, std::__1::allocator<bool> > >
+__bit_iterator
+swap<unsigned char *>
+__construct_backward_with_exception_guarantees<std::__1::allocator<unsigned char>, unsigned char, void>
+construct<unsigned char, void>
+construct<unsigned char>
+swap<unsigned long long *>
+__construct_backward_with_exception_guarantees<std::__1::allocator<unsigned long long>, unsigned long long, void>
+construct<unsigned long long, void>
+construct<unsigned long long>
+set_symlen
+__make_ref
+set_sizes
+number<unsigned char, 1>
+find<int *, int>
+set_groups<(anonymous namespace)::WDLEntry>
+unmap
+c_str
+probe_table<(anonymous namespace)::WDLEntry, Tablebases::WDLScore>
+do_probe_table<(anonymous namespace)::WDLEntry, Tablebases::WDLScore>
+map_score
+count_if<Square *, (lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/syzygy/tbprobe.cpp:876:26)>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/count_if.h
+sort<Square *>
+sort<Square *, std::__1::__less<Square, Square> >
+ChessEngine/Engine/syzygy/../types.h
+off_A1H8
+sort<Square *, bool (*)(Square, Square)>
+swap<Piece>
+ChessEngine/Engine/syzygy/../position.h
+ChessEngine/Engine/syzygy/../bitboard.h
+item
+max_element<Square *, bool (*)(Square, Square)>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/max_element.h
+init<(anonymous namespace)::WDLEntry>
+~TBFile
+~basic_ifstream
+do_init<(anonymous namespace)::WDLEntry, (anonymous namespace)::WLDEntryPiece [2]>
+PairsData
+do_init<(anonymous namespace)::WDLEntry, (anonymous namespace)::WDLEntryPawn>
+get<(anonymous namespace)::WDLEntry, 0>
+get<0UL, (anonymous namespace)::WDLEntry *, (anonymous namespace)::DTZEntry *>
+get<(anonymous namespace)::WDLEntry *, (anonymous namespace)::DTZEntry *>
+_ZTv0_n24_N12_GLOBAL__N_16TBFileD0Ev
+_ZTv0_n24_N12_GLOBAL__N_16TBFileD1Ev
+_ZTv0_n24_NSt3__114basic_ifstreamIcNS_11char_traitsIcEEED0Ev
+_ZTv0_n24_NSt3__114basic_ifstreamIcNS_11char_traitsIcEEED1Ev
+TBFile
+is_open
+basic_ifstream
+~WDLEntry
+~PairsData
+destroy<(anonymous namespace)::WDLEntry, void>
+~DTZEntry
+destroy<(anonymous namespace)::DTZEntry, void>
+root_probe_wdl
+probe_wdl
+root_probe
+has_repeated
+dtz_before_zeroing
+search<true>
+ChessEngine/Engine/syzygy/../movegen.h
+probe_dtz
+sign_of<int>
+sign_of<Tablebases::WDLScore>
+probe_table<(anonymous namespace)::DTZEntry, int>
+do_probe_table<(anonymous namespace)::DTZEntry, int>
+check_dtz_stm
+init<(anonymous namespace)::DTZEntry>
+do_init<(anonymous namespace)::DTZEntry, (anonymous namespace)::DTZEntryPiece>
+set_dtz_map<(anonymous namespace)::DTZEntryPiece>
+do_init<(anonymous namespace)::DTZEntry, (anonymous namespace)::DTZEntryPawn>
+set_dtz_map<(anonymous namespace)::DTZEntryPawn>
+get<(anonymous namespace)::DTZEntry, 1>
+get<1UL, (anonymous namespace)::WDLEntry *, (anonymous namespace)::DTZEntry *>
+search<false>
+construct<(anonymous namespace)::DTZEntry, (anonymous namespace)::DTZEntry, void>
+construct<(anonymous namespace)::DTZEntry, (anonymous namespace)::DTZEntry>
+DTZEntry
+TBEntry
+Atomic
+construct<(anonymous namespace)::DTZEntry *, (anonymous namespace)::DTZEntry *const &, void>
+construct<(anonymous namespace)::DTZEntry *, (anonymous namespace)::DTZEntry *const &>
+__construct_at_end<std::__1::move_iterator<(anonymous namespace)::DTZEntry **> >
+construct<(anonymous namespace)::DTZEntry *, (anonymous namespace)::DTZEntry *, void>
+construct<(anonymous namespace)::DTZEntry *, (anonymous namespace)::DTZEntry *>
+distance<std::__1::move_iterator<(anonymous namespace)::DTZEntry **> >
+__distance<std::__1::move_iterator<(anonymous namespace)::DTZEntry **> >
+operator-<(anonymous namespace)::DTZEntry **, (anonymous namespace)::DTZEntry **>
+move_backward<(anonymous namespace)::DTZEntry **, (anonymous namespace)::DTZEntry **>
+__move_backward<(anonymous namespace)::DTZEntry *, (anonymous namespace)::DTZEntry *>
+swap<(anonymous namespace)::DTZEntry **>
+move<(anonymous namespace)::DTZEntry **, (anonymous namespace)::DTZEntry **>
+__move<(anonymous namespace)::DTZEntry *, (anonymous namespace)::DTZEntry *>
+construct<(anonymous namespace)::WDLEntry, (anonymous namespace)::WDLEntry, void>
+construct<(anonymous namespace)::WDLEntry, (anonymous namespace)::WDLEntry>
+WDLEntry
+construct<(anonymous namespace)::WDLEntry *, (anonymous namespace)::WDLEntry *const &, void>
+construct<(anonymous namespace)::WDLEntry *, (anonymous namespace)::WDLEntry *const &>
+__construct_at_end<std::__1::move_iterator<(anonymous namespace)::WDLEntry **> >
+construct<(anonymous namespace)::WDLEntry *, (anonymous namespace)::WDLEntry *, void>
+construct<(anonymous namespace)::WDLEntry *, (anonymous namespace)::WDLEntry *>
+distance<std::__1::move_iterator<(anonymous namespace)::WDLEntry **> >
+__distance<std::__1::move_iterator<(anonymous namespace)::WDLEntry **> >
+operator-<(anonymous namespace)::WDLEntry **, (anonymous namespace)::WDLEntry **>
+move_backward<(anonymous namespace)::WDLEntry **, (anonymous namespace)::WDLEntry **>
+__move_backward<(anonymous namespace)::WDLEntry *, (anonymous namespace)::WDLEntry *>
+swap<(anonymous namespace)::WDLEntry **>
+move<(anonymous namespace)::WDLEntry **, (anonymous namespace)::WDLEntry **>
+__move<(anonymous namespace)::WDLEntry *, (anonymous namespace)::WDLEntry *>
+operator!=<const PieceType *>
+operator==<const PieceType *>
+__construct_at_end<const PieceType *>
+__construct_range_forward<std::__1::allocator<PieceType>, const PieceType, PieceType, PieceType, PieceType, void>
+operator!=<std::__1::pair<int, Square> *>
+operator==<std::__1::pair<int, Square> *>
+__push_back_slow_path<std::__1::pair<int, Square> >
+swap<std::__1::pair<int, Square> *>
+__construct_backward_with_exception_guarantees<std::__1::allocator<std::__1::pair<int, Square> >, std::__1::pair<int, Square>, void>
+construct<std::__1::pair<int, Square>, std::__1::pair<int, Square> , void>
+construct<std::__1::pair<int, Square>, std::__1::pair<int, Square> >
+__construct_one_at_end<std::__1::pair<int, Square> >
+make_pair<int &, Square &>
+operator!=<Square *>
+operator==<Square *>
+__push_back_slow_path<const Square &>
+swap<Square *>
+__construct_backward_with_exception_guarantees<std::__1::allocator<Square>, Square, void>
+construct<Square, const Square &, void>
+construct<Square, const Square &>
+__construct_one_at_end<const Square &>
+__ZN12_GLOBAL__N_18IsolatedE
+__ZN12_GLOBAL__N_18BackwardE
+__ZN12_GLOBAL__N_15LeverE
+__ZZN5Pawns4initEvE4Seed
+__ZN12_GLOBAL__N_19ConnectedE
+__ZN12_GLOBAL__N_115ShelterWeaknessE
+__ZN12_GLOBAL__N_111StormDangerE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/pawns.cpp
+probe
+ChessEngine/Engine/pawns.cpp
+evaluate<BLACK>
+adjacent_files_bb
+pawn_attack_span
+evaluate<WHITE>
+pawn_key
+shelter_storm<BLACK>
+min<File>
+min<File, std::__1::__less<File, File> >
+max<File>
+max<File, std::__1::__less<File, File> >
+do_king_safety<BLACK>
+shelter_storm<WHITE>
+do_king_safety<WHITE>
+__ZN4PSQTL5BonusE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/psqt.cpp
+ChessEngine/Engine/psqt.cpp
+-[EngineController init]
+-[EngineController dealloc]
+-[EngineController sendCommand:]
+-[EngineController commitCommands]
+-[EngineController setPlayStyle:]
+-[EngineController setOption:value:]
+-[EngineController startAnalyzing]
+-[EngineController stopAnalyzing]
+-[EngineController startEngine]
+-[EngineController _startEngine]
+-[EngineController shutdownEngine]
+-[EngineController setNumberOfPrincipalVariations:]
+-[EngineController setGameFen:]
+-[EngineController setIsAnalyzing:]
+-[EngineController unassociateWithGlobalInstance]
+-[EngineController sendBestMove:ponderMove:]
+-[EngineController sendCurrentMove:number:depth:totalMoves:]
+-[EngineController sendPrincipalVariation:]
+-[EngineController sendSearchingStatus:]
+-[EngineController commandIsWaiting]
+-[EngineController delegate]
+-[EngineController setDelegate:]
+-[EngineController gameFen]
+-[EngineController numberOfPrincipalVariations]
+-[EngineController isAnalyzing]
+-[EngineController isEngineThreadRunning]
+-[EngineController .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.43
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_CLASSLIST_REFERENCES_$_.58
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.68
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_SELECTOR_REFERENCES_.72
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_SELECTOR_REFERENCES_.88
+_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.96
+__OBJC_METACLASS_RO_$_EngineController
+__OBJC_$_INSTANCE_METHODS_EngineController
+_OBJC_IVAR_$_EngineController.commandQueue
+_OBJC_IVAR_$_EngineController.thread
+_OBJC_IVAR_$_EngineController.waitCondition
+_OBJC_IVAR_$_EngineController.waitConditionLock
+_OBJC_IVAR_$_EngineController.engineThreadShouldStop
+_OBJC_IVAR_$_EngineController.ignoresBestMove
+_OBJC_IVAR_$_EngineController._isAnalyzing
+_OBJC_IVAR_$_EngineController._isEngineThreadRunning
+_OBJC_IVAR_$_EngineController._delegate
+_OBJC_IVAR_$_EngineController._gameFen
+_OBJC_IVAR_$_EngineController._numberOfPrincipalVariations
+__OBJC_$_INSTANCE_VARIABLES_EngineController
+__OBJC_$_PROP_LIST_EngineController
+__OBJC_CLASS_RO_$_EngineController
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/EngineController.mm
+ChessEngine/EngineController.mm
+ChessEngine/EngineController.h
+__ZN12_GLOBAL__N_110KPKBitbaseE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/bitbase.cpp
+ChessEngine/Engine/bitbase.cpp
+operator (anonymous namespace)::Result
+classify
+classify<BLACK>
+index
+classify<WHITE>
+KPKPosition
+construct<(anonymous namespace)::KPKPosition, void>
+construct<(anonymous namespace)::KPKPosition>
+__ZN7EndgameIL11EndgameType1E5ValueED1Ev
+__ZN7EndgameIL11EndgameType10E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType11E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType15E11ScaleFactorED1Ev
+__ZN7EndgameIL11EndgameType21E11ScaleFactorED1Ev
+__ZN8Endgames5probeI5ValueEEP11EndgameBaseIT_Ey
+__ZN8Endgames5probeI11ScaleFactorEEP11EndgameBaseIT_Ey
+__ZN7EndgameIL11EndgameType1E5ValueED0Ev
+__ZNK7EndgameIL11EndgameType1E5ValueE11strong_sideEv
+__ZN7EndgameIL11EndgameType10E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType10E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType11E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType11E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType15E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType15E11ScaleFactorE11strong_sideEv
+__ZN7EndgameIL11EndgameType21E11ScaleFactorED0Ev
+__ZNK7EndgameIL11EndgameType21E11ScaleFactorE11strong_sideEv
+__ZN12_GLOBAL__N_111EvaluateKXKE
+__ZN12_GLOBAL__N_110ScaleKBPsKE
+__ZN12_GLOBAL__N_111ScaleKQKRPsE
+__ZN12_GLOBAL__N_19ScaleKPsKE
+__ZN12_GLOBAL__N_19ScaleKPKPE
+__ZTS7EndgameIL11EndgameType1E5ValueE
+__ZTI7EndgameIL11EndgameType1E5ValueE
+__ZTS7EndgameIL11EndgameType10E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType10E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType11E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType11E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType15E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType15E11ScaleFactorE
+__ZTS7EndgameIL11EndgameType21E11ScaleFactorE
+__ZTI7EndgameIL11EndgameType21E11ScaleFactorE
+__ZN12_GLOBAL__N_113QuadraticOursE
+__ZN12_GLOBAL__N_115QuadraticTheirsE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/material.cpp
+__emplace_unique_key_args<unsigned long long, const std::__1::piecewise_construct_t &, std::__1::tuple<const unsigned long long &>, std::__1::tuple<> >
+__construct_node<const std::__1::piecewise_construct_t &, std::__1::tuple<const unsigned long long &>, std::__1::tuple<> >
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<const unsigned long long &>, std::__1::tuple<> , void>
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<ScaleFactor>, std::__1::default_delete<EndgameBase<ScaleFactor> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<const unsigned long long &>, std::__1::tuple<> >
+pair<const unsigned long long &>
+pair<const unsigned long long &, 0UL>
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<const unsigned long long &>, std::__1::tuple<> , void>
+construct<std::__1::pair<const unsigned long long, std::__1::unique_ptr<EndgameBase<Value>, std::__1::default_delete<EndgameBase<Value> > > >, const std::__1::piecewise_construct_t &, std::__1::tuple<const unsigned long long &>, std::__1::tuple<> >
+probe<ScaleFactor>
+__count_unique<unsigned long long>
+probe<Value>
+ChessEngine/Engine/material.cpp
+imbalance<BLACK>
+imbalance<WHITE>
+is_KQKRPs
+is_KBPsKs
+is_KXK
+__ZN18TranspositionTableD1Ev
+__GLOBAL__sub_I_tt.cpp
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/tt.cpp
+_GLOBAL__sub_I_tt.cpp
+ChessEngine/Engine/tt.cpp
+hashfull
+msb
+~TranspositionTable
+-[CommandQueue init]
+-[CommandQueue isEmpty]
+-[CommandQueue size]
+-[CommandQueue front]
+-[CommandQueue back]
+-[CommandQueue push:]
+-[CommandQueue pop]
+-[CommandQueue .cxx_destruct]
+__OBJC_METACLASS_RO_$_CommandQueue
+__OBJC_$_INSTANCE_METHODS_CommandQueue
+__OBJC_$_INSTANCE_VARIABLES_CommandQueue
+__OBJC_CLASS_RO_$_CommandQueue
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/CommandQueue.mm
+ChessEngine/CommandQueue.mm
+__ZN10MovePicker9next_moveEv.cold.1
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/movepick.cpp
+_ZN10MovePicker9next_moveEv.cold.1
+ChessEngine/Engine/movepick.cpp
+next_move
+swap<ExtMove>
+max_element<ExtMove *>
+max_element<ExtMove *, std::__1::__less<ExtMove, ExtMove> >
+insertion_sort
+partition<ExtMove *, (lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/movepick.cpp:243:68)>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/__algorithm/partition.h
+__partition<(lambda at /Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/movepick.cpp:243:68) &, ExtMove *>
+score<EVASIONS>
+score<QUIETS>
+score<CAPTURES>
+MovePicker
+__ZNSt3__16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEED1Ev
+__ZNSt3__16vectorINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE9push_backERKS6_
+__ZNKSt3__113__vector_baseINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE20__throw_length_errorEv
+__ZNSt3__113__vector_baseINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEENS4_IS6_EEE5clearEv
+__GLOBAL__sub_I_benchmark.cpp
+__ZN12_GLOBAL__N_18DefaultsE
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/benchmark.cpp
+_GLOBAL__sub_I_benchmark.cpp
+ChessEngine/Engine/benchmark.cpp
+__construct_at_end<const std::__1::string *>
+__construct_range_forward<std::__1::allocator<std::__1::string>, const std::__1::string *, std::__1::string *>
+construct<std::__1::string, const std::__1::string &, void>
+construct<std::__1::string, const std::__1::string &>
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/c++/v1/initializer_list
+destroy<std::__1::string, void>
+__compressed_pair<nullptr_t, std::__1::allocator<std::__1::string> &>
+__compressed_pair_elem<std::__1::allocator<std::__1::string> &, void>
+assign<std::__1::string *>
+__construct_at_end<std::__1::string *>
+__construct_range_forward<std::__1::allocator<std::__1::string>, std::__1::string *, std::__1::string *>
+construct<std::__1::string, std::__1::string &, void>
+construct<std::__1::string, std::__1::string &>
+copy<std::__1::string *, std::__1::string *>
+__copy<std::__1::string *, std::__1::string *>
+__copy_constexpr<std::__1::string *, std::__1::string *>
+distance<std::__1::string *>
+__distance<std::__1::string *>
+__push_back_slow_path<const std::__1::string &>
+swap<std::__1::string *>
+__construct_backward_with_exception_guarantees<std::__1::allocator<std::__1::string>, std::__1::string *>
+construct<std::__1::string, std::__1::string, void>
+construct<std::__1::string, std::__1::string>
+__construct_one_at_end<const std::__1::string &>
+benchmark
+ChessEngine/Engine/search.h
+____Z8pv_to_uiRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiiib_block_invoke
+___copy_helper_block_ea8_32s
+___destroy_helper_block_ea8_32s
+____Z9pv_to_ui2RKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE_block_invoke
+____Z14currmove_to_uiNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiii_block_invoke
+____Z17searchstats_to_uixl_block_invoke
+____Z14bestmove_to_uiRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7__block_invoke
+___copy_helper_block_ea8_32s40s
+___destroy_helper_block_ea8_32s40s
+__GLOBAL__sub_I_iosextension.mm
+__ZN12_GLOBAL__N_111CurrentMoveE
+_OBJC_SELECTOR_REFERENCES_.3
+___block_descriptor_40_ea8_32s_e5_v8?0l
+__ZN12_GLOBAL__N_117CurrentMoveNumberE
+__ZN12_GLOBAL__N_112CurrentDepthE
+__ZN12_GLOBAL__N_114TotalMoveCountE
+___block_descriptor_48_ea8_32s40s_e5_v8?0l
+/Users/iwheelbuy/Documents/ChessEngine/ChessEngine/Engine/iosextension.mm
+_GLOBAL__sub_I_iosextension.mm
+ChessEngine/Engine/iosextension.mm
+command_is_waiting
+command_to_engine
+__destroy_helper_block_ea8_32s40s
+__copy_helper_block_ea8_32s40s
+___Z14bestmove_to_uiRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7__block_invoke
+bestmove_to_ui
+dispatch_get_main_queue
+/Applications/Xcode_13_4_1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/usr/include/dispatch/queue.h
+___Z17searchstats_to_uixl_block_invoke
+searchstats_to_ui
+time_string
+___Z14currmove_to_uiNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiii_block_invoke
+currmove_to_ui
+___Z9pv_to_ui2RKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE_block_invoke
+pv_to_ui2
+__destroy_helper_block_ea8_32s
+__copy_helper_block_ea8_32s
+___Z8pv_to_uiRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEiiib_block_invoke
+pv_to_ui
+engine_exit
+engine_init

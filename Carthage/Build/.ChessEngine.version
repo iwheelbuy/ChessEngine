@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "3e1436db779f9d251d96a2dfc9de317e62d187a5",
+  "iOS" : [
+    {
+      "name" : "ChessEngine",
+      "hash" : "0f4a99317c50cc54e757222f283f7f4b095d0843019fc3796a1e058de6b88eeb",
+      "linking" : "dynamic"
+    }
+  ]
+}
